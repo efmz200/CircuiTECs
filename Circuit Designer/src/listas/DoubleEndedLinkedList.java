@@ -10,15 +10,17 @@ package listas;
  * @author Erick
  * @param <T>
  */
-public class DobleEndenLinkedList<T>{
+public class DoubleEndedLinkedList<T>{
     private Nodo<T> head;
     private Nodo<T> tile;
     private int lenn;
    
     /**
      * Constructor de lista enlazada con docble final
+     *  
      */
-    public DobleEndenLinkedList(){
+    public DoubleEndedLinkedList(){
+   
         head=null;
         tile=null;
         lenn=0;        
@@ -68,6 +70,9 @@ public class DobleEndenLinkedList<T>{
         lenn++;
      }
     public void add(int i){
+        if(this.head==null){
+            this.head=new Nodo<>();
+        }
         if (i==this.lenn-1){
             addLast();
             return ;
@@ -88,6 +93,10 @@ public class DobleEndenLinkedList<T>{
     
     }
     public void add(int i,T dato){
+        if(this.head==null){
+            this.head= new Nodo<>(dato);
+            return;
+        }
         if (i==this.lenn-1){
             addLast(dato);
             return ;
