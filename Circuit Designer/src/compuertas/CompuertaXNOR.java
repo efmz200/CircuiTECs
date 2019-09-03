@@ -9,12 +9,10 @@ package compuertas;
  *
  * @author Erick
  */
-public class CompuertaXNOR extends Compuerta{
-    boolean entrada1;
-    boolean entrada2;
+public class CompuertaXNOR extends Compuerta{    
     public void CompuertaAnd(){
-        this.cantEntradas=2;
-        this.cantSalidas=1;
+        this.setCantEntradas(2);
+        this.setCantSalidas(1);
     }
     public void setEntrada(boolean entrada){
         if ((entrada1!=true) || (entrada1!= false)){
