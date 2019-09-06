@@ -1,5 +1,7 @@
 package compuertas;
 
+import listas.DoubleEndedLinkedList;
+
 /**
  *
  * @author Erick
@@ -7,10 +9,14 @@ package compuertas;
 class CompuertaOR extends Compuerta {
     
     public void CompuertaOR(){
-        this.setCantEntradas(2);
-        this.setCantSalidas(1);
+        listaEntradas=new DoubleEndedLinkedList();
     }
     public void  operar(){   
-        this.setSalida(entrada1||entrada2);        
-    }
+               
+        DoubleEndedLinkedList lista= getListaEntradas();
+        if(lista.in(true)){
+            setSalida(true);
+        }
+        setSalida(false);
+    }   
 }

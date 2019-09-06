@@ -41,6 +41,23 @@ public class DoubleEndedLinkedList<T>{
     
     }
     /**
+     * Metodo para conseguir el valor de una posición de la lista
+     * @param i
+     * @return 
+     */
+    public T getInfo(int i){
+        Nodo<T> aux=this.head;
+        int cont=0;
+        while(aux!=null){
+            if(cont==i){
+                return aux.getDato();
+            }
+            aux=aux.getNext();
+            cont++;
+        }
+    return null;
+    }
+    /**
      * Metodo para agregar un espacio vacio al inicio de la lista
      */
     public void addFirst(){
@@ -89,34 +106,6 @@ public class DoubleEndedLinkedList<T>{
     this.tile=aux;
     this.lenn ++;
     }
-//    public void add(int i,T dato){
-//        if (i==this.lenn-1){
-//            Nodo<T> aux= new Nodo<>(dato);
-//            this.tile.setNext(aux);
-//        }
-//        if(this.head==null){
-//            this.head=new Nodo<>();
-//        }
-//        if (i==this.lenn-1){
-//            addLast();
-//            return ;
-//        }
-//        if (i==lenn){
-//            return ;
-//        }
-//        int pos = 1;
-//        Nodo<T> aux=this.head;
-//        while(pos<i){
-//            aux=aux.getNext();
-//            pos++;
-//        }
-//        Nodo<T> temp=aux.getNext();
-//        aux.setNext(new Nodo());
-//        aux.getNext().setNext(temp);
-//        lenn++;
-//    
-//    }
-    
     /**
      * Metodo para agregar un dato a una posicion dada de la lista
      * @param i
@@ -154,6 +143,11 @@ public class DoubleEndedLinkedList<T>{
         lenn++;
     
     }
+    /**
+     * Metodo para buscar si un dato esta en la lista
+     * @param dato
+     * @return 
+     */
     public boolean in(T dato){
         Nodo<T> aux=head;
         while (aux != null){

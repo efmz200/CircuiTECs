@@ -5,15 +5,12 @@
         <group>
             <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/CompuertaOR.java</file>
             <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/CompuertaXNOR.java</file>
+            <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/circuit/designer/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/listas/Nodo.java</file>
             <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/CompuertaAnd.java</file>
             <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/CompuertasXOR.java</file>
-            <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/listas/Nodo.java</file>
             <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/Compuerta.java</file>
-            <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/CompuertaNOR.java</file>
             <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/CompuertaNOT.java</file>
-            <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/CompuertaTrue.java</file>
-            <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/CompuertaFalse.java</file>
-            <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/compuertas/CompuertaNAND.java</file>
             <file>file:/C:/Users/Erick/Desktop/proyecto%201/CircuiTECs/Circuit%20Designer/src/listas/DoubleEndedLinkedList.java</file>
         </group>
     </open-files>

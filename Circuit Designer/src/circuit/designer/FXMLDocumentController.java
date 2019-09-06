@@ -32,10 +32,10 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        DoubleEndedLinkedList<String> lista;
+        DoubleEndedLinkedList lista;
         // TODO
         lista = new DoubleEndedLinkedList();
-        lista.add("0"); 
+        lista.add(true); 
         lista.add("1");
         lista.add("2");
         lista.add("3");
@@ -43,7 +43,7 @@ public class FXMLDocumentController implements Initializable {
         lista.add("5");
         lista.add("6");
         
-        lista.in("2");
+        lista.in(true);
         System.out.println("PRINT LEN " + lista.len());
                 
     }    

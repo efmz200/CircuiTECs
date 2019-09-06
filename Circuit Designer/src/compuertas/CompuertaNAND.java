@@ -1,17 +1,21 @@
 package compuertas;
 
+import listas.DoubleEndedLinkedList;
+
 /**
  *
  * @author Erick
  */
 public class CompuertaNAND extends Compuerta{
     
-    public void CompuertaNAND(){
-        this.setCantEntradas(2);
-        this.setCantSalidas(1);
+     public void compuertaNand(){
+        listaEntradas=new DoubleEndedLinkedList();
     }
-    public void  operar(){
-        
-        this.setSalida(!(entrada1&entrada2));        
-    }
+    public void  operar(){        
+        DoubleEndedLinkedList lista= getListaEntradas();
+        if(lista.in(false)){
+            setSalida(true);
+        }
+        setSalida(false);
+    }     
 }

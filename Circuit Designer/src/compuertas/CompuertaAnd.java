@@ -5,16 +5,21 @@
  */
 package compuertas;
 
+import listas.DoubleEndedLinkedList;
+
 /**
  *
  * @author Erick
  */
-class CompuertaAnd extends Compuerta {    
-    public void CompuertaAnd(){
-        this.setCantEntradas(2);
-        this.setCantSalidas(1);                      
-    }    
+class CompuertaAnd extends Compuerta { 
+    public void compuertaAnd(){
+        listaEntradas=new DoubleEndedLinkedList();
+    }
     public void  operar(){        
-        this.setSalida(entrada1&entrada2);        
+        DoubleEndedLinkedList lista= getListaEntradas();
+        if(lista.in(false)){
+            setSalida(false);
+        }
+        setSalida(true);
     }    
 }

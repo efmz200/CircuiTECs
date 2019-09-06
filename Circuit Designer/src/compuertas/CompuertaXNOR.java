@@ -1,26 +1,29 @@
 package compuertas;
 
+import listas.DoubleEndedLinkedList;
+
 /**
  *
  * @author Erick
  */
 public class CompuertaXNOR extends Compuerta{    
-    public void CompuertaAnd(){
-        this.setCantEntradas(2);
-        this.setCantSalidas(1);
+     public void compuertaAnd(){
+        listaEntradas=new DoubleEndedLinkedList();
     }
-    public void setEntrada(boolean entrada){
-        if ((entrada1!=true) || (entrada1!= false)){
-            entrada1=entrada;
+    public void  operar(){        
+        DoubleEndedLinkedList lista= getListaEntradas();
+        int cont=0;
+        int largo=lista.len();
+        boolean primPos=lista.getInfo(0);
+       
+        while (cont<=largo){
+            
         }
-        entrada2= entrada;
+              
+        if(lista){
+            setSalida(false);
+        }
+        setSalida(true);
     }    
-    public void operar(){
-        if(entrada1==entrada2){
-            this.setSalida(true);
-        }
-        else{
-             this.setSalida(false);
-        }
-    }    
+    
 }
