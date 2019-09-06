@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package compuertas;
 import listas.DoubleEndedLinkedList;
 
@@ -12,10 +7,44 @@ import listas.DoubleEndedLinkedList;
  */
 public class Compuerta {
     DoubleEndedLinkedList listaEntradas;
-    int cantEntradas;
-    boolean salida;
+    private int cantEntradas;
+    private int cantSalidas;
+    private boolean salida;
+    boolean entrada1;
+    boolean entrada2;
     
-    
-    public void operar(){}
-    
+    public void setEntrada1(boolean entrada){
+        entrada1=entrada;              
+    }
+    public void setEntrada2(boolean entrada){
+        entrada2=entrada;     
+    }
+    public void setListaEntradas(DoubleEndedLinkedList listaEntradas) {
+        this.listaEntradas = listaEntradas;
+    }
+
+    public void setCantEntradas(int cantEntradas) {
+        this.cantEntradas = cantEntradas;
+    }
+
+    public void setCantSalidas(int cantSalidas) {
+        this.cantSalidas = cantSalidas;
+    }    
+    public void setSalida(boolean dato){
+        this.salida=dato;
+    }
+    public boolean getSalida(){
+        return salida;
+    }
+    public DoubleEndedLinkedList getListaEntradas() {
+        return listaEntradas;
+    }
+
+    public int getCantEntradas() {
+        return cantEntradas;
+    }
+
+    public int getCantSalidas() {
+        return cantSalidas;
+    }    
 }

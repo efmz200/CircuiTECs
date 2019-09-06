@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package compuertas;
 
 /**
@@ -19,8 +14,7 @@ public class CompuertaXNOR extends Compuerta{
             entrada1=entrada;
         }
         entrada2= entrada;
-    }
-    @Override
+    }    
     public void operar(){
         if(entrada1==entrada2){
             this.setSalida(true);
@@ -28,6 +22,5 @@ public class CompuertaXNOR extends Compuerta{
         else{
              this.setSalida(false);
         }
-    }
-    
+    }    
 }

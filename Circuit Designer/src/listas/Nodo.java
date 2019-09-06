@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package listas;
 
 /**
@@ -18,8 +13,7 @@ public class Nodo <T> {
      * Constructor del Nodo vacio
      */
     public Nodo(){
-        siguiente=null;
-        
+        siguiente=null;        
     }
     /**
      * Método del constructor del Nodo con un dato
@@ -44,7 +38,10 @@ public class Nodo <T> {
     public void setNext(Nodo<T> Next){
             this.siguiente= Next;
     }
-    
+    /**
+     * Metodo para obtener el nodo siguiente
+     * @return nodo siguiente
+     */
     public Nodo<T> getNext(){
         return this.siguiente;
     }

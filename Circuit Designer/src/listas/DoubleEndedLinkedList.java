@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package listas;
 
 /**
- *
+ * Clase para crear una lista enlazada 
  * @author Erick
  * @param <T>
  */
@@ -16,7 +12,7 @@ public class DoubleEndedLinkedList<T>{
     private int lenn;
    
     /**
-     * Constructor de lista enlazada con docble final
+     * Constructor de lista 
      *  
      */
     public DoubleEndedLinkedList(){
@@ -32,6 +28,21 @@ public class DoubleEndedLinkedList<T>{
     public int len(){
         return this.lenn;
     }
+    /**
+     * Metodo para hacer un print de los elementos dwe la lista 
+     */
+    public void print(){
+        Nodo<T> aux= head;
+        while(aux !=null){
+            System.out.println(aux.getDato());
+            aux=aux.getNext();
+            
+        }
+    
+    }
+    /**
+     * Metodo para agregar un espacio vacio al inicio de la lista
+     */
     public void addFirst(){
         if (this.head==null){
             this.head= new Nodo();
@@ -44,6 +55,10 @@ public class DoubleEndedLinkedList<T>{
         }
         lenn++;
     }
+    /**
+     * Metodo para agregar un dato al inicio de la lista
+     * @param dato 
+     */
     public void addFirst(T dato){
         if (this.head==null){
             this.head= new Nodo(dato);
@@ -57,48 +72,71 @@ public class DoubleEndedLinkedList<T>{
         }
         lenn++;
     }
-    public void addLast(){
-        Nodo <T>temp=new Nodo();
-        this.tile.setNext(temp);
-        this.tile=temp;
+    /**
+     * Metodo para agregar un dato al final de la lista
+     * @param dato 
+     */
+    public void add(T dato){
+        Nodo<T> aux= new Nodo<>(dato);
+        if (this.head==null){
+            this.head=aux;
+            this.tile=aux;
+            this.lenn ++;
+            return;
+        }           
         
+    this.tile.setNext(aux);
+    this.tile=aux;
+    this.lenn ++;
     }
-     public void addLast(T dato){
-        Nodo <T>temp=new Nodo(dato);
-        this.tile.setNext(temp);
-        this.tile=temp;
-        lenn++;
-     }
-    public void add(int i){
-        if(this.head==null){
-            this.head=new Nodo<>();
-        }
-        if (i==this.lenn-1){
-            addLast();
-            return ;
-        }
-        if (i==lenn){
-            return ;
-        }
-        int pos = 1;
-        Nodo<T> aux=this.head;
-        while(pos<i){
-            aux=aux.getNext();
-            pos++;
-        }
-        Nodo<T> temp=aux.getNext();
-        aux.setNext(new Nodo());
-        aux.getNext().setNext(temp);
-        lenn++;
+//    public void add(int i,T dato){
+//        if (i==this.lenn-1){
+//            Nodo<T> aux= new Nodo<>(dato);
+//            this.tile.setNext(aux);
+//        }
+//        if(this.head==null){
+//            this.head=new Nodo<>();
+//        }
+//        if (i==this.lenn-1){
+//            addLast();
+//            return ;
+//        }
+//        if (i==lenn){
+//            return ;
+//        }
+//        int pos = 1;
+//        Nodo<T> aux=this.head;
+//        while(pos<i){
+//            aux=aux.getNext();
+//            pos++;
+//        }
+//        Nodo<T> temp=aux.getNext();
+//        aux.setNext(new Nodo());
+//        aux.getNext().setNext(temp);
+//        lenn++;
+//    
+//    }
     
-    }
+    /**
+     * Metodo para agregar un dato a una posicion dada de la lista
+     * @param i
+     * @param dato 
+     */
     public void add(int i,T dato){
+        
+        if (i==0){
+           Nodo<T> aux=new Nodo(dato);
+           aux.setNext(head);
+           this.head=aux;
+           lenn++;
+           return;
+        }
         if(this.head==null){
             this.head= new Nodo<>(dato);
             return;
         }
         if (i==this.lenn-1){
-            addLast(dato);
+            add(dato);
             return ;
         }
         if (i==lenn){
@@ -116,20 +154,27 @@ public class DoubleEndedLinkedList<T>{
         lenn++;
     
     }
-    public Nodo<T> in(T dato){
+    public boolean in(T dato){
         Nodo<T> aux=head;
-        while (aux.getNext()!= null){
+        while (aux != null){
             if (aux.getDato().equals(dato)){
-                return aux;
+                System.out.println(aux.getDato());
+                return true;
             }
-  
+            aux=aux.getNext();  
         }
-        return null;
+        return false;
     }
+    /**
+     * Metodo para eliminar el primer elemento 
+     */
     private void removeFirst(){
         this.head=this.head.getNext();
     }
-    
+    /**
+     * Metodo para eliminar un elemento en una posicion dada
+     * @param pos 
+     */
     public void remove(int pos){
         if (pos==0){
             removeFirst();

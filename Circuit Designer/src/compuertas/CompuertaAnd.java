@@ -9,24 +9,12 @@ package compuertas;
  *
  * @author Erick
  */
-class CompuertaAns extends Compuerta {
-    boolean entrada1;
-    boolean entrada2;
+class CompuertaAnd extends Compuerta {    
     public void CompuertaAnd(){
-        this.cantEntradas=2;
-        
-               
-    }
-    public void setEntrada(boolean entrada){
-        if ((entrada1!=true) || (entrada1!= false)){
-            entrada1=entrada;
-        }
-        entrada2= entrada;
-    }
-    @Override
-    public void  operar(){
-        this.cantEntradas=2;
-        this.setEntrada(entrada1&entrada2);        
-    }
-    
+        this.setCantEntradas(2);
+        this.setCantSalidas(1);                      
+    }    
+    public void  operar(){        
+        this.setSalida(entrada1&entrada2);        
+    }    
 }
