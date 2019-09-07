@@ -5,10 +5,10 @@ package compuertas;
  * @author Erick
  */
 public class CompuertaNOT extends Compuerta {
+    
     boolean entrada;
     public void CompuertaNOT(){
-        this.setCantEntradas(1);
-    this.setCantSalidas(1);
+        entrada=true;
     }
     public void setEntrada(boolean entrada){
          this.entrada= entrada;

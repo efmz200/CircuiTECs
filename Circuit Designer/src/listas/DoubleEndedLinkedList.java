@@ -29,6 +29,20 @@ public class DoubleEndedLinkedList<T>{
         return this.lenn;
     }
     /**
+     * Metodo para determinar si todos los datos son iguales
+     * @return boolean
+     */
+    public boolean same(){
+        Nodo<T> aux=this.head.getNext();
+        while(aux!=null){
+            if(aux.getDato()!=this.head){
+                return false;
+            }
+        aux=aux.getNext();
+        }
+    return true;
+    }
+    /**
      * Metodo para hacer un print de los elementos dwe la lista 
      */
     public void print(){

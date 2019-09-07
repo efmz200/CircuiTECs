@@ -36,14 +36,13 @@ public class FXMLDocumentController implements Initializable {
         // TODO
         lista = new DoubleEndedLinkedList();
         lista.add(true); 
-        lista.add("1");
-        lista.add("2");
-        lista.add("3");
-        lista.add("4");
-        lista.add("5");
-        lista.add("6");
+        lista.add(true);
+        lista.add(true);
+        lista.add(true);
+        lista.add(true);
+        lista.add(true);
+        System.out.println(lista.same());
         
-        lista.in(true);
         System.out.println("PRINT LEN " + lista.len());
                 
     }    
