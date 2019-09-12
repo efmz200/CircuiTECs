@@ -16,6 +16,7 @@ class CompuertaOR extends Compuerta {
         DoubleEndedLinkedList lista= getListaEntradas();
         if(lista.in(true)){
             setSalida(true);
+            return;
         }
         setSalida(false);
     }   

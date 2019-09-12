@@ -35,7 +35,7 @@ public class DoubleEndedLinkedList<T>{
     public boolean same(){
         Nodo<T> aux=this.head.getNext();
         while(aux!=null){
-            if(aux.getDato()!=this.head){
+            if(aux.getDato()!=this.head.getDato()){
                 return false;
             }
         aux=aux.getNext();

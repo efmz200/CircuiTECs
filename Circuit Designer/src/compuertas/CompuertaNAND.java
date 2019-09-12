@@ -15,6 +15,7 @@ public class CompuertaNAND extends Compuerta{
         DoubleEndedLinkedList lista= getListaEntradas();
         if(lista.in(false)){
             setSalida(true);
+            return;
         }
         setSalida(false);
     }     

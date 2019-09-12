@@ -13,38 +13,29 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import listas.DoubleEndedLinkedList;
 import listas.Nodo;
-
+import compuertas.CompuertaNOR;
 /**
  *
  * @author Erick
  */
 public class FXMLDocumentController implements Initializable {
-    
+    DoubleEndedLinkedList lista;
     @FXML
     private Label label;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        Nodo aux= new compuertaNor();
+        lista.add(new compuertaNor());
     }
     
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) {                
+       lista = new DoubleEndedLinkedList();
         
-        DoubleEndedLinkedList lista;
-        // TODO
-        lista = new DoubleEndedLinkedList();
-        lista.add(true); 
-        lista.add(true);
-        lista.add(true);
-        lista.add(true);
-        lista.add(true);
-        lista.add(true);
-        System.out.println(lista.same());
         
-        System.out.println("PRINT LEN " + lista.len());
                 
+        
     }    
     
 }
