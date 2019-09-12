@@ -13,20 +13,20 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import listas.DoubleEndedLinkedList;
 import listas.Nodo;
-import compuertas.CompuertaNOR;
+import compuertas.Compuerta;
 /**
  *
  * @author Erick
  */
 public class FXMLDocumentController implements Initializable {
-    DoubleEndedLinkedList lista;
+    DoubleEndedLinkedList<Compuerta> lista;
     @FXML
     private Label label;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        Nodo aux= new compuertaNor();
-        lista.add(new compuertaNor());
+        Compuerta aux= new Compuerta("AND");
+        lista.add(aux);
     }
     
     @Override
