@@ -54,6 +54,19 @@ public class DoubleEndedLinkedList<T>{
         }
     
     }
+    public Nodo<T> getNodo(int pos){
+        Nodo<T> aux=this.head;
+        int cont=0;
+        while(aux!=null){
+            if(cont==pos){
+                return aux;
+            }
+            aux=aux.getNext();
+            cont++;
+        }
+    return null;
+    }
+   
     /**
      * Metodo para conseguir el valor de una posición de la lista
      * @param i
@@ -166,7 +179,7 @@ public class DoubleEndedLinkedList<T>{
         Nodo<T> aux=head;
         while (aux != null){
             if (aux.getDato().equals(dato)){
-                System.out.println(aux.getDato());
+                //System.out.println(aux.getDato());
                 return true;
             }
             aux=aux.getNext();  
@@ -203,5 +216,8 @@ public class DoubleEndedLinkedList<T>{
             return;
         }
         aux.setNext(aux.getNext().getNext());
+    }
+    public Nodo<T> getLast(){
+        return this.tile;
     }
 }

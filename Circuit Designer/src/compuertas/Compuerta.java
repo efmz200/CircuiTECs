@@ -6,21 +6,32 @@ import listas.DoubleEndedLinkedList;
  * @author Erick
  */
 public class Compuerta {
-    DoubleEndedLinkedList listaEntradas=new DoubleEndedLinkedList();
+    private DoubleEndedLinkedList listaEntradas=new DoubleEndedLinkedList();
+    private DoubleEndedLinkedList<Compuerta> compuertasSiguientes=new DoubleEndedLinkedList();
     private int cantEntradas;
     private int cantSalidas;
     private boolean salida;
-    private final String tipo;
+    private String tipo;
+    public int id;
+
+    public String getTipo() {
+        return tipo;
+    }
     
-    public Compuerta(String tipo){
+    
+    public Compuerta(String tipo,int id){
         this.tipo=tipo;
         listaEntradas=new DoubleEndedLinkedList();
+        this.id=id;
     }
     public void addEntrada(boolean entrada){
         listaEntradas.add(entrada);
         this.cantEntradas++;
     }   
-    public void setSalida(boolean dato){
+    public void addSiguiente(Compuerta compuerta){
+        compuertasSiguientes.add(compuerta);
+    }
+    private void setSalida(boolean dato){
         this.salida=dato;
     }
     public boolean getSalida(){
@@ -39,49 +50,76 @@ public class Compuerta {
     } 
     
     public void operacion(){
-        if (tipo.equals("AND")){
+        if (tipo==("AND")){
            if(listaEntradas.in(false)){
             setSalida(false);
-        }
-        setSalida(true);
-        }
-        if (tipo.equals("FALSE")){
-            setSalida(false);
-        
-        }
-        if (tipo.equals("NAND")){
-            if(listaEntradas.in(false)){
+            return;
+            }
             setSalida(true);
+            return;
         }
-        setSalida(false);
+        if (tipo==("FALSE")){
+            setSalida(false);
+            return;
         }
-        if (tipo.equals("NOR")){
-             if(listaEntradas.in(true)){
+        if (tipo==("NAND")){
+            if(listaEntradas.getInfo(0).equals(false)&&listaEntradas.same()){
                 setSalida(false);
                 return;
             }
             setSalida(true);
-        }
-        if (tipo.equals("NOT")){
-            boolean dato;
+            return;
+            
             
         }
-        if (tipo.equals("OR")){
+        if (tipo==("NOR")){
+             if(listaEntradas.getInfo(0).equals(true)&&listaEntradas.same()){
+                setSalida(true);
+                return;
+            }
+            setSalida(false);
+            return;
+        }
+        if (tipo==("NOT")){
+            boolean dato;
+            //dato=listaEntradas.getInfo(0);
+            
+        }
+        if (tipo==("OR")){
             if(listaEntradas.in(true)){
             setSalida(true);
+                return;
+            }
+            setSalida(false);
+            return;
         }
-        setSalida(false);
-        
-        }if (tipo.equals("TRUE")){
+        if (tipo==("TRUE")){
             setSalida(true);
-        
+            return;
         }
-        if (tipo.equals("XNOR")){
+        if (tipo==("XNOR")){
             setSalida((listaEntradas.same()));
-        
+            return;
         }
-        if (tipo.equals("XOR")){
+        if (tipo==("XOR")){
             setSalida(!(listaEntradas.same()));
+            }
+        
+    }
+    public void enviarSalida(){
+        int fin=compuertasSiguientes.len();
+        int contador=0;
+        while (contador<fin){
+            compuertasSiguientes.getNodo(contador).getDato().addEntrada(salida);
+            contador++;
         }
     }
+    public void setId(int id){
+        this.id=id;
+    }
+    public int getId(){
+        return this.id;
+    }
 }
+
+
