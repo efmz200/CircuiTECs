@@ -10,7 +10,7 @@ import listas.Nodo;
  * @author Erick
  */
 public class OprComp {
-    public static Compuerta getComp(int compId,DoubleEndedLinkedList lista){
+    public Compuerta getComp(int compId,DoubleEndedLinkedList lista){
         Nodo<Compuerta> aux=lista.getNodo(0);
         while(aux != null){
             if(aux.getDato().getId()==compId){
@@ -23,5 +23,22 @@ public class OprComp {
             aux=aux.getNext();
         }
         return null;
+    }
+    /**
+     * Metodo para obtener las salidas del circuito
+     * @param lista que contiene las compuertas donde se va a buscar
+     */
+    public void getSalidas(DoubleEndedLinkedList lista){
+         Nodo<Compuerta> aux=lista.getNodo(0);
+        while(aux != null){
+            if (aux.getDato().getCantSalidas()==0){
+                System.out.println("Una de las salidas es: "+aux.getDato().getSalida());
+                System.out.println(aux.getDato().getSalida());
+                aux=aux.getNext();
+                continue;
+            }            
+            aux=aux.getNext();       
+        
+        }
     }
 }
