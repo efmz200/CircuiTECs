@@ -44,8 +44,10 @@ public class Compuerta {
     public int getCantEntradas() {
         return cantEntradas;
     }
-
-    public int getCantSalidas() {
+    public void addCantSalida(){
+        this.cantSalidas++;
+    }
+    public int getCantSalidas () {
         return cantSalidas;
     } 
     

@@ -19,6 +19,7 @@ public class Facade {
     //DoubleEndedLinkedList list;
     private int id;
     private int cantCompuertas;
+    OprComp opr= new OprComp();
     
     public Facade(){
         listaCompuertas= new DoubleEndedLinkedList();
@@ -29,7 +30,7 @@ public class Facade {
         Nodo<Compuerta> aux=listaCompuertas.getNodo(0);
         Compuerta comp1;
         Compuerta comp2;
-        OprComp opr= new OprComp();
+        
         comp1=opr.getComp(idComp1,listaCompuertas);
         comp2=opr.getComp(idComp2,listaCompuertas);
         if (comp1==null||comp2==null){
@@ -37,6 +38,7 @@ public class Facade {
             return;
         } 
        comp1.addSiguiente(comp2); 
+       comp1.addCantSalida();
     }    
     public void crearComp(String tipo){
         Compuerta comp=new Compuerta(tipo,id);       
@@ -54,15 +56,7 @@ public class Facade {
             aux=aux.getNext();
         }
         aux.getDato().operacion();
-//        aux.getDato().enviarSalida();
-        
-        //System.out.println(aux.getDato().getSalida());
-        
-         
-    }
-    public void getSalida(){
-        System.out.println(listaCompuertas.getLast().getDato().getSalida());
-    }
-    
+        opr.getSalidas(listaCompuertas);         
+    }    
 }
 

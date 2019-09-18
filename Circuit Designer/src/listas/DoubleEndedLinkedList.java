@@ -54,6 +54,11 @@ public class DoubleEndedLinkedList<T>{
         }
     
     }
+    /**
+     * Metodo para obtener un nodo de acuerdo a la posicion que se necesite 
+     * @param pos int para buscar la posicion de un nodo
+     * @return el Nodo en la posicion que se solicito 
+     */
     public Nodo<T> getNodo(int pos){
         Nodo<T> aux=this.head;
         int cont=0;
@@ -65,8 +70,7 @@ public class DoubleEndedLinkedList<T>{
             cont++;
         }
     return null;
-    }
-   
+    }   
     /**
      * Metodo para conseguir el valor de una posición de la lista
      * @param i
@@ -129,10 +133,10 @@ public class DoubleEndedLinkedList<T>{
             return;
         }           
         
-    this.tile.setNext(aux);
-    this.tile=aux;
-    this.lenn ++;
-    }
+        this.tile.setNext(aux);
+        this.tile=aux;
+        this.lenn ++;
+        }
     /**
      * Metodo para agregar un dato a una posicion dada de la lista
      * @param i
@@ -217,6 +221,10 @@ public class DoubleEndedLinkedList<T>{
         }
         aux.setNext(aux.getNext().getNext());
     }
+    /**
+     * Metodo para obterner el nodo en la ultima posicion     * 
+     * @return Nodo en el tile de la lista
+     */
     public Nodo<T> getLast(){
         return this.tile;
     }
