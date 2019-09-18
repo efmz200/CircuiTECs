@@ -8,8 +8,8 @@
 <AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="circuit.designer.FXMLDocumentController">
     <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#202428" height="800.0" layoutX="1242.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="363.0" />
-        <Button fx:id="btnRun" layoutX="1268.0" layoutY="745.0" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="310.0" text="Correr" />
-      <Button fx:id="btnConect" layoutX="1315.0" layoutY="628.0" onAction="#btnConectar" prefHeight="31.0" prefWidth="216.0" text="Conectar" />
+        <Button fx:id="btnRun" layoutX="1268.0" layoutY="745.0" prefHeight="31.0" prefWidth="310.0" text="Correr" />
+      <Button fx:id="btnConect" layoutX="1315.0" layoutY="628.0" onAction="#Conectar" prefHeight="31.0" prefWidth="216.0" text="Conectar" />
       <TextField fx:id="idComp1" layoutX="1261.0" layoutY="685.0" prefHeight="31.0" prefWidth="132.0" promptText="ID Compuerta 1" />
       <TextField fx:id="idComp2" layoutX="1438.0" layoutY="685.0" prefHeight="31.0" prefWidth="139.0" promptText="ID Compuerta 2" />
     </children>

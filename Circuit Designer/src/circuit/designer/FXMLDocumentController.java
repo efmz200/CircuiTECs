@@ -11,9 +11,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import listas.DoubleEndedLinkedList;
-import listas.Nodo;
-import compuertas.Compuerta;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,7 +19,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import Facade.Facade;
-import javafx.scene.control.Button;
+//import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 
@@ -35,8 +32,7 @@ public class FXMLDocumentController implements Initializable {
     private Facade facade;
     @FXML private TextField idComp1;
     @FXML private TextField idComp2;
-    @FXML private Button btnConect;
-
+   
     public FXMLDocumentController() {
         this.facade = new Facade();
     }
@@ -45,8 +41,13 @@ public class FXMLDocumentController implements Initializable {
     private void btnCorrer(ActionEvent event) throws IOException {
        facade.correr();
     }
-    private void btnConectar(ActionEvent event) throws IOException {
-        //System.out.println(idComp1.getText());
+    @FXML
+    public void Conectar(ActionEvent event) throws IOException {
+        int id1=Integer.parseInt(idComp1.getText());
+        int id2=Integer.parseInt(idComp2.getText());
+        System.out.println(id1);
+        System.out.println(id2);
+        
     }
     
     private void btnAnd(ActionEvent event)throws IOException {
@@ -87,11 +88,7 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {                
-        System.out.println("hola");
-        
-        
-                
-        
+        //TODO   
     }    
     
 }
