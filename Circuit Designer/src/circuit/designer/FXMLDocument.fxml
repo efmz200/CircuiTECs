@@ -7,21 +7,23 @@
 
 <AnchorPane id="AnchorPane" prefHeight="950.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="circuit.designer.FXMLDocumentController">
     <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#202428" height="906.0" layoutX="1386.0" stroke="BLACK" strokeType="INSIDE" width="408.0" />
-        <Button fx:id="btnRun" layoutX="1419.0" layoutY="855.0" onAction="#btnCorrer" prefHeight="31.0" prefWidth="310.0" text="Correr" />
-      <Button fx:id="btnConect" layoutX="1466.0" layoutY="740.0" onAction="#conectar" prefHeight="31.0" prefWidth="216.0" text="Conectar" />
-      <TextField fx:id="idComp1" layoutX="1419.0" layoutY="798.0" prefHeight="31.0" prefWidth="132.0" promptText="ID Compuerta 1" />
-      <TextField fx:id="idComp2" layoutX="1590.0" layoutY="798.0" prefHeight="31.0" prefWidth="139.0" promptText="ID Compuerta 2" />
-      <Button fx:id="btnXOR" layoutX="1403.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnXor" prefHeight="93.0" prefWidth="186.0" text="XOR" />
-      <Button fx:id="btnTRUE" layoutX="1405.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnTrue" prefHeight="102.0" prefWidth="160.0" text="TRUE" />
-      <Button fx:id="btnOR" layoutX="1410.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnOr" prefHeight="95.0" prefWidth="172.0" text="OR" />
-      <Button fx:id="btnXNOR" layoutX="1602.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnXnor" prefHeight="93.0" prefWidth="181.0" text="XNOR" />
-      <Button fx:id="btnNOR" layoutX="1608.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnNor" prefHeight="95.0" prefWidth="170.0" text="NOR" />
-      <Button fx:id="bntNAND" layoutX="1603.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnNand" prefHeight="94.0" prefWidth="160.0" text="NAND" />
-      <Button fx:id="btnFALSE" layoutX="1596.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnFalse" prefHeight="102.0" prefWidth="172.0" text="FALSE" />
-      <Button fx:id="btnAND" layoutX="1419.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnAnd" prefHeight="97.0" prefWidth="164.0" text="AND" />
-      <Button fx:id="btnNOT" layoutX="1521.0" layoutY="395.0" mnemonicParsing="false" onAction="#btnNot" prefHeight="102.0" prefWidth="162.0" text="NOT" />
-      <Button layoutX="1414.0" layoutY="681.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="139.0" text="Guardar" />
-      <Button layoutX="1592.0" layoutY="681.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="172.0" text="Editar" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#202428" height="932.0" layoutX="1386.0" stroke="BLACK" strokeType="INSIDE" width="414.0" />
+        <Button fx:id="btnRun" layoutX="1420.0" layoutY="855.0" onAction="#btnCorrer" prefHeight="31.0" prefWidth="350.0" text="Correr" />
+      <Button fx:id="btnConect" layoutX="1419.0" layoutY="736.0" onAction="#conectar" prefHeight="31.0" prefWidth="350.0" text="Conectar" />
+      <TextField fx:id="idComp1" layoutX="1419.0" layoutY="798.0" prefHeight="31.0" prefWidth="146.0" promptText="ID Compuerta 1" />
+      <TextField fx:id="idComp2" layoutX="1617.0" layoutY="798.0" prefHeight="31.0" prefWidth="153.0" promptText="ID Compuerta 2" />
+      <Button fx:id="btnXOR" layoutX="1396.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnXor" prefHeight="93.0" prefWidth="186.0" text="XOR" />
+      <Button fx:id="btnTRUE" layoutX="1396.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnTrue" prefHeight="100.0" prefWidth="186.0" text="TRUE" />
+      <Button fx:id="btnOR" layoutX="1396.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnOr" prefHeight="95.0" prefWidth="186.0" text="OR" />
+      <Button fx:id="btnXNOR" layoutX="1607.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnXnor" prefHeight="93.0" prefWidth="186.0" text="XNOR" />
+      <Button fx:id="btnNOR" layoutX="1607.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnNor" prefHeight="95.0" prefWidth="186.0" text="NOR" />
+      <Button fx:id="bntNAND" layoutX="1607.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnNand" prefHeight="94.0" prefWidth="186.0" text="NAND" />
+      <Button fx:id="btnFALSE" layoutX="1607.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnFalse" prefHeight="100.0" prefWidth="186.0" text="FALSE" />
+      <Button fx:id="btnAND" layoutX="1396.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnAnd" prefHeight="97.0" prefWidth="186.0" text="AND" />
+      <Button fx:id="btnNOT" layoutX="1397.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnNot" prefHeight="93.0" prefWidth="186.0" text="NOT" />
+      <Button layoutX="1397.0" layoutY="628.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="186.0" text="Guardar" />
+      <Button layoutX="1609.0" layoutY="628.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="186.0" text="Editar" />
+      <Button layoutX="1609.0" layoutY="514.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="186.0" text="User" />
+      <Button layoutX="1416.0" layoutY="682.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="350.0" text="Conecciones" />
     </children>
 </AnchorPane>
