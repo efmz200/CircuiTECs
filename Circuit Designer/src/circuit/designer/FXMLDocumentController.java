@@ -108,8 +108,7 @@ public class FXMLDocumentController implements Initializable {
         int id1=Integer.parseInt(idComp1.getText());
         int id2=Integer.parseInt(idComp2.getText());
         facade.conectar(id1, id2);
-        System.out.println(id1);
-        System.out.println(id2);
+        
         
     }
     

@@ -14,10 +14,8 @@ public class OprComp {
         Nodo<Compuerta> aux=lista.getNodo(0);
         while(aux != null){
             if(aux.getDato().getId()==compId){
-                System.out.println("Se encontro la compuerta con el id");
-                System.out.println(aux.getDato().id);
-                System.out.println("que es tipo");
-                System.out.println(aux.getDato().getTipo());
+                System.out.println("La compuerta con el id "+aux.getDato().id+ " de tipo "+aux.getDato().getTipo());
+                
                 return aux.getDato();
             }
             aux=aux.getNext();

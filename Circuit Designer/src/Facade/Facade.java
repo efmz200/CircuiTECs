@@ -29,8 +29,8 @@ public class Facade {
     public void conectar(int idComp1,int idComp2){
         Nodo<Compuerta> aux=listaCompuertas.getNodo(0);
         Compuerta comp1;
-        Compuerta comp2;
-        
+        Compuerta comp2;        
+        System.out.println("Se conectaran:");
         comp1=opr.getComp(idComp1,listaCompuertas);
         comp2=opr.getComp(idComp2,listaCompuertas);
         if (comp1==null||comp2==null){
@@ -42,8 +42,7 @@ public class Facade {
     }    
     public void crearComp(String tipo){
         Compuerta comp=new Compuerta(tipo,id);       
-        System.out.println(comp.getTipo());        
-        System.out.println(comp.id);         
+        System.out.println("Se ha creado una compuerta "+comp.getTipo()+" con el id "+comp.id);        
         listaCompuertas.add(comp);
         id++;
         cantCompuertas++;
