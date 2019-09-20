@@ -65,7 +65,7 @@ public class Compuerta {
             return;
         }
         if (tipo==("NAND")){
-            if(listaEntradas.getInfo(0).equals(false)&&listaEntradas.same()){
+            if(listaEntradas.getInfo(0).equals(true)&&listaEntradas.same()){
                 setSalida(false);
                 return;
             }
@@ -75,7 +75,7 @@ public class Compuerta {
             
         }
         if (tipo==("NOR")){
-             if(listaEntradas.getInfo(0).equals(true)&&listaEntradas.same()){
+             if(listaEntradas.getInfo(0).equals(false)&&listaEntradas.same()){
                 setSalida(true);
                 return;
             }
@@ -87,9 +87,9 @@ public class Compuerta {
             //dato=listaEntradas.getInfo(0);
             
         }
-        if (tipo==("OR")){
+        if (tipo==("OR")){            
             if(listaEntradas.in(true)){
-            setSalida(true);
+                setSalida(true);
                 return;
             }
             setSalida(false);
@@ -100,10 +100,11 @@ public class Compuerta {
             return;
         }
         if (tipo==("XNOR")){
-            setSalida((listaEntradas.same()));
+            System.out.println(listaEntradas.same());
+            setSalida(listaEntradas.same());
             return;
         }
-        if (tipo==("XOR")){
+        if (tipo==("XOR")){            
             setSalida(!(listaEntradas.same()));
             }
         
