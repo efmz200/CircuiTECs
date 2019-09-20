@@ -66,30 +66,39 @@ public class FXMLDocumentController implements Initializable {
     private void btnCorrer(ActionEvent event) throws IOException {
        facade.correr();
     }
+    @FXML
     private void btnAnd(ActionEvent event) throws IOException {
        facade.crearComp("AND");
     }
+    @FXML
     private void btnNand(ActionEvent event) throws IOException {
         facade.crearComp("NAND");
     }
+    @FXML
     private void btnOr(ActionEvent event) throws IOException {
        facade.crearComp("OR");
     }
+    @FXML
     private void btnNor(ActionEvent event) throws IOException {
        facade.crearComp("NOR");
     }
+    @FXML
     private void btnXor(ActionEvent event) throws IOException {
        facade.crearComp("XOR");
     }
+    @FXML
     private void btnXnor(ActionEvent event) throws IOException {
        facade.crearComp("XNOR");
     }
+    @FXML
     private void btnNot(ActionEvent event) throws IOException {
        facade.crearComp("NOT");
     }
+    @FXML
     private void btnTrue(ActionEvent event) throws IOException {
        facade.crearComp("TRUE");
     }
+    @FXML
     private void btnFalse(ActionEvent event) throws IOException {
        facade.crearComp("FALSE");
     }      
