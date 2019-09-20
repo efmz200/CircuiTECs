@@ -8,8 +8,8 @@
 <AnchorPane id="AnchorPane" prefHeight="950.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="circuit.designer.FXMLDocumentController">
     <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#202428" height="906.0" layoutX="1386.0" stroke="BLACK" strokeType="INSIDE" width="408.0" />
-        <Button fx:id="btnRun" layoutX="1419.0" layoutY="855.0" prefHeight="31.0" prefWidth="310.0" text="Correr" />
-      <Button fx:id="btnConect" layoutX="1466.0" layoutY="740.0" onAction="#Conectar" prefHeight="31.0" prefWidth="216.0" text="Conectar" />
+        <Button fx:id="btnRun" layoutX="1419.0" layoutY="855.0" onAction="#btnCorrer" prefHeight="31.0" prefWidth="310.0" text="Correr" />
+      <Button fx:id="btnConect" layoutX="1466.0" layoutY="740.0" onAction="#conectar" prefHeight="31.0" prefWidth="216.0" text="Conectar" />
       <TextField fx:id="idComp1" layoutX="1419.0" layoutY="798.0" prefHeight="31.0" prefWidth="132.0" promptText="ID Compuerta 1" />
       <TextField fx:id="idComp2" layoutX="1590.0" layoutY="798.0" prefHeight="31.0" prefWidth="139.0" promptText="ID Compuerta 2" />
       <Button fx:id="btnXOR" layoutX="1403.0" layoutY="274.0" mnemonicParsing="false" onAction="#btnXor" prefHeight="93.0" prefWidth="186.0" text="XOR" />

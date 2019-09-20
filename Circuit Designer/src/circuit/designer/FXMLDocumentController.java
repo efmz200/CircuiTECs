@@ -104,15 +104,11 @@ public class FXMLDocumentController implements Initializable {
     }      
     
     @FXML
-    public void Conectar(ActionEvent event) throws IOException {
+    public void conectar(ActionEvent event) throws IOException {
         int id1=Integer.parseInt(idComp1.getText());
         int id2=Integer.parseInt(idComp2.getText());
         facade.conectar(id1, id2);
-        
-        
-    }
-    
-    
+    }  
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {                
