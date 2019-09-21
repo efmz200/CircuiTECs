@@ -39,6 +39,8 @@ public class FXMLDocumentController implements Initializable {
     public FXMLDocumentController() {
         this.facade = new Facade();
     }
+    
+    @FXML
     private void cargarBtns(){
         
         //Obtencion del link de las imagenes 
@@ -59,7 +61,7 @@ public class FXMLDocumentController implements Initializable {
         Image imgXNOR =new Image(linkXNOR.toString(),200,200,false,true); 
         Image imgXOR =new Image(linkOR.toString(),200,200,false,true);
         
-        //btnAND.setGraphic(new ImageView(imgAND));
+        //botnAnd.setGraphic(new ImageView(imgAND));
     }
     
     @FXML
