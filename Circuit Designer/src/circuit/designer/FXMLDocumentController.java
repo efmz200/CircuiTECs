@@ -109,7 +109,10 @@ public class FXMLDocumentController implements Initializable {
         int id2=Integer.parseInt(idComp2.getText());
         facade.conectar(id1, id2);
     }  
-    
+    @FXML
+    public void conecciones(ActionEvent event) throws IOException {
+        facade.conectionList();
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {                
         //TODO   

@@ -39,4 +39,11 @@ public class OprComp {
         
         }
     }
+    public void mostratComp(DoubleEndedLinkedList lista){
+        Nodo<Compuerta> aux=lista.getNodo(0);
+        while(aux!=null){
+            System.out.println(aux.getDato().getId());
+            aux=aux.getNext();
+        }
+    }
 }

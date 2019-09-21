@@ -27,7 +27,6 @@ public class Facade {
         cantCompuertas=0;
     }
     public void conectar(int idComp1,int idComp2){
-        Nodo<Compuerta> aux=listaCompuertas.getNodo(0);
         Compuerta comp1;
         Compuerta comp2;        
         System.out.println("Se conectaran:");
@@ -56,6 +55,15 @@ public class Facade {
         }
         aux.getDato().operacion();
         opr.getSalidas(listaCompuertas);         
-    }    
+    }
+    
+    public void conectionList(){
+        Nodo<Compuerta> aux=listaCompuertas.getNodo(0);
+        while (aux!=null){
+            System.out.println("La compuerta "+aux.getDato().getId()+ " se conecta con");
+            opr.mostratComp(aux.getDato().getListaEntradas());
+            aux=aux.getNext();
+        }
+    }
 }
 
