@@ -89,7 +89,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnOr(ActionEvent event) throws IOException {
        facade.crearComp("OR");
-       Image imgOR =new Image("CompImagenes/NAND.png");
+       Image imgOR =new Image("CompImagenes/OR.png");
        ImageView imgOr=new ImageView();      
        imgOr.setImage(imgOR);        
        root.getChildren().add(imgOr);
@@ -97,7 +97,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnNor(ActionEvent event) throws IOException {
        facade.crearComp("NOR");
-       Image imgNOR =new Image("CompImagenes/NAND.png");
+       Image imgNOR =new Image("CompImagenes/NOR.png");
        ImageView imgNor=new ImageView();      
        imgNor.setImage(imgNOR);        
        root.getChildren().add(imgNor);
@@ -105,7 +105,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnXor(ActionEvent event) throws IOException {
        facade.crearComp("XOR");
-       Image imgXOR =new Image("CompImagenes/NAND.png");
+       Image imgXOR =new Image("CompImagenes/XOR.png");
        ImageView imgXor=new ImageView();      
        imgXor.setImage(imgXOR);        
        root.getChildren().add(imgXor);
@@ -113,7 +113,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnXnor(ActionEvent event) throws IOException {
        facade.crearComp("XNOR");
-       Image imgXNOR =new Image("CompImagenes/NAND.png");
+       Image imgXNOR =new Image("CompImagenes/XNOR.png");
        ImageView imgXnor=new ImageView();      
        imgXnor.setImage(imgXNOR);        
        root.getChildren().add(imgXnor);
@@ -121,7 +121,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnNot(ActionEvent event) throws IOException {
        facade.crearComp("NOT");
-       Image imgNOT =new Image("CompImagenes/NAND.png");
+       Image imgNOT =new Image("CompImagenes/NOT.png");
        ImageView imgNot=new ImageView();      
        imgNot.setImage(imgNOT);        
        root.getChildren().add(imgNot);
