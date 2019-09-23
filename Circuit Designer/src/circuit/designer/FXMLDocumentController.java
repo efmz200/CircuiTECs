@@ -97,10 +97,15 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnNor(ActionEvent event) throws IOException {
        facade.crearComp("NOR");
+       Image imgNOR =new Image("CompImagenes/NAND.png");
+       ImageView imgNor=new ImageView();      
+       imgNor.setImage(imgNOR);        
+       root.getChildren().add(imgNor);
     }
     @FXML
     private void btnXor(ActionEvent event) throws IOException {
        facade.crearComp("XOR");
+       
     }
     @FXML
     private void btnXnor(ActionEvent event) throws IOException {
