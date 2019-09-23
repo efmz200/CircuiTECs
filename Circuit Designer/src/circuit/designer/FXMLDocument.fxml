@@ -14,11 +14,39 @@
       <Button fx:id="btnConect" layoutX="1399.0" layoutY="795.0" onAction="#conectar" prefHeight="31.0" prefWidth="397.0" text="Conectar" />
       <TextField fx:id="idComp1" layoutX="1400.0" layoutY="857.0" prefHeight="31.0" prefWidth="165.0" promptText="ID Compuerta 1" />
       <TextField fx:id="idComp2" layoutX="1617.0" layoutY="857.0" prefHeight="31.0" prefWidth="178.0" promptText="ID Compuerta 2" />
-      <Button fx:id="btnXOR" layoutX="1396.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnXor" prefHeight="93.0" prefWidth="186.0" text="XOR" />
+      <Button fx:id="btnXOR" layoutX="1396.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnXor" prefHeight="93.0" prefWidth="190.0">
+         <graphic>
+            <ImageView fitHeight="81.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../CompImagenes/XOR.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Button fx:id="btnTRUE" layoutX="1396.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnTrue" prefHeight="100.0" prefWidth="186.0" text="TRUE" />
-      <Button fx:id="btnOR" layoutX="1396.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnOr" prefHeight="95.0" prefWidth="186.0" text="OR" />
-      <Button fx:id="btnXNOR" layoutX="1607.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnXnor" prefHeight="93.0" prefWidth="186.0" text="XNOR" />
-      <Button fx:id="btnNOR" layoutX="1607.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnNor" prefHeight="95.0" prefWidth="186.0" text="NOR" />
+      <Button fx:id="btnOR" layoutX="1396.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnOr" prefHeight="105.0" prefWidth="190.0">
+         <graphic>
+            <ImageView fitHeight="89.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../CompImagenes/OR.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnXNOR" layoutX="1607.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnXnor" prefHeight="93.0" prefWidth="186.0">
+         <graphic>
+            <ImageView fitHeight="83.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../CompImagenes/XNOR.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnNOR" layoutX="1607.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnNor" prefHeight="96.0" prefWidth="186.0">
+         <graphic>
+            <ImageView fitHeight="86.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../CompImagenes/NOR.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Button fx:id="bntNAND" layoutX="1607.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnNand" prefHeight="94.0" prefWidth="186.0">
          <graphic>
             <ImageView fitHeight="99.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
@@ -36,7 +64,14 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="btnNOT" layoutX="1397.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnNot" prefHeight="93.0" prefWidth="186.0" text="NOT" />
+      <Button fx:id="btnNOT" layoutX="1397.0" layoutY="514.0" mnemonicParsing="false" onAction="#btnNot" prefHeight="93.0" prefWidth="186.0">
+         <graphic>
+            <ImageView fitHeight="91.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../CompImagenes/NOT.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Button layoutX="1397.0" layoutY="628.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="186.0" text="Guardar" />
       <Button layoutX="1609.0" layoutY="628.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="186.0" text="Editar" />
       <Button layoutX="1609.0" layoutY="514.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="186.0" text="User" />
