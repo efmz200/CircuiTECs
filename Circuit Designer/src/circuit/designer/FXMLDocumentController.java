@@ -121,6 +121,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnNot(ActionEvent event) throws IOException {
        facade.crearComp("NOT");
+       Image imgNOT =new Image("CompImagenes/NAND.png");
+       ImageView imgNot=new ImageView();      
+       imgNot.setImage(imgNOT);        
+       root.getChildren().add(imgNot);
     }
     @FXML
     private void btnTrue(ActionEvent event) throws IOException {
