@@ -20,10 +20,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.image.Image;
 import Facade.Facade;
-
-
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 
 /**
@@ -35,6 +34,7 @@ public class FXMLDocumentController implements Initializable {
     private Facade facade;
     @FXML private TextField idComp1;
     @FXML private TextField idComp2;
+    @FXML private AnchorPane root;
    
     public FXMLDocumentController() {
         this.facade = new Facade();
@@ -71,6 +71,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnAnd(ActionEvent event) throws IOException {
        facade.crearComp("AND");
+       Image imgAND =new Image("CompImagenes/AND.png");
+       ImageView imgAnd=new ImageView();      
+       imgAnd.setImage(imgAND);
+       root.getChildren().add(imgAnd);
+       
+       
+       
     }
     @FXML
     private void btnNand(ActionEvent event) throws IOException {
@@ -115,8 +122,16 @@ public class FXMLDocumentController implements Initializable {
     public void conecciones(ActionEvent event) throws IOException {
         facade.conectionList();
     }
+    @FXML
+    public void ventana(ActionEvent event) throws IOException {
+        facade.conectionList();
+    }
+    
+
     @Override
-    public void initialize(URL url, ResourceBundle rb) {                
+    public void initialize(URL url, ResourceBundle rb) { 
+        
+        
         //TODO   
     }    
     
