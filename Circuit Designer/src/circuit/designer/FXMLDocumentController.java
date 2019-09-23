@@ -83,12 +83,16 @@ public class FXMLDocumentController implements Initializable {
         facade.crearComp("NAND");
         Image imgNAND =new Image("CompImagenes/NAND.png");
         ImageView imgNand=new ImageView();      
-        imgNand.setImage(imgNAND);
+        imgNand.setImage(imgNAND);        
         root.getChildren().add(imgNand);
     }
     @FXML
     private void btnOr(ActionEvent event) throws IOException {
        facade.crearComp("OR");
+       Image imgOR =new Image("CompImagenes/NAND.png");
+       ImageView imgOr=new ImageView();      
+       imgOr.setImage(imgOR);        
+       root.getChildren().add(imgOr);
     }
     @FXML
     private void btnNor(ActionEvent event) throws IOException {
