@@ -10,6 +10,7 @@ public class Compuerta {
     private DoubleEndedLinkedList<Compuerta> compuertasSiguientes=new DoubleEndedLinkedList();
     private int cantEntradas;
     private int cantSalidas;
+    private boolean entry;
     private boolean salida;
     private String tipo;
     public int id;
@@ -25,6 +26,13 @@ public class Compuerta {
         this.id=id;
     }
     public void addEntrada(boolean entrada){
+        if(this.tipo=="NOT"){
+            if (cantEntradas==0){
+                entry=entrada;
+                return;
+            }
+            return;
+        }
         listaEntradas.add(entrada);
         this.cantEntradas++;
     }   
@@ -83,8 +91,7 @@ public class Compuerta {
             return;
         }
         if (tipo==("NOT")){
-            boolean dato;
-            //dato=listaEntradas.getInfo(0);
+            setSalida(!(entry));
             
         }
         if (tipo==("OR")){            
