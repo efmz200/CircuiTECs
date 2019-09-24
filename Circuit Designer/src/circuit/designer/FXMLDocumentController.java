@@ -150,6 +150,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnFalse(ActionEvent event) throws IOException {
        facade.crearComp("FALSE");
+       Image imgFALSE =new Image("CompImagenes/FALSE.png");
+       ImageView imgFalse=new ImageView();      
+       imgFalse.setImage(imgFALSE);
+       root.getChildren().add(imgFalse);
     }      
     
     @FXML
