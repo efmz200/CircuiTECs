@@ -80,6 +80,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgAND =new Image("CompImagenes/AND.png");
        ImageView imgAnd=new ImageView();      
        imgAnd.setImage(imgAND);
+       imgAnd.setX(100);
+       imgAnd.setY(100);
 //       imgAnd.setOnMousePressed(circleOnMousePressedEventHandler);
 //       imgAnd.setOnMouseDragged(circleOnMouseDraggedEventHandler);
        root.getChildren().add(imgAnd); 
@@ -91,12 +93,10 @@ public class FXMLDocumentController implements Initializable {
         facade.crearComp("NAND");
         Image imgNAND =new Image("CompImagenes/NAND.png");
         ImageView imgNand=new ImageView();      
-        imgNand.setImage(imgNAND);
-        
+        imgNand.setImage(imgNAND);        
         imgNand.setX(100);
         imgNand.setY(100);
         listaImgComp.add(imgNand);
-        System.out.println(listaImgComp.getNodo(0).getDato().getX());
         root.getChildren().add(imgNand);
     }
     @FXML
@@ -104,7 +104,9 @@ public class FXMLDocumentController implements Initializable {
        facade.crearComp("OR");
        Image imgOR =new Image("CompImagenes/OR.png");
        ImageView imgOr=new ImageView();      
-       imgOr.setImage(imgOR);        
+       imgOr.setImage(imgOR);   
+       imgOr.setX(100);
+       imgOr.setY(100);
        root.getChildren().add(imgOr);
     }
     @FXML
@@ -112,7 +114,9 @@ public class FXMLDocumentController implements Initializable {
        facade.crearComp("NOR");
        Image imgNOR =new Image("CompImagenes/NOR.png");
        ImageView imgNor=new ImageView();      
-       imgNor.setImage(imgNOR);        
+       imgNor.setImage(imgNOR);
+       imgNor.setX(100);
+       imgNor.setY(100);
        root.getChildren().add(imgNor);
     }
     @FXML
@@ -120,7 +124,9 @@ public class FXMLDocumentController implements Initializable {
        facade.crearComp("XOR");
        Image imgXOR =new Image("CompImagenes/XOR.png");
        ImageView imgXor=new ImageView();      
-       imgXor.setImage(imgXOR);        
+       imgXor.setImage(imgXOR);
+       imgXor.setX(100);
+       imgXor.setY(100);
        root.getChildren().add(imgXor);
     }
     @FXML
@@ -128,7 +134,9 @@ public class FXMLDocumentController implements Initializable {
        facade.crearComp("XNOR");
        Image imgXNOR =new Image("CompImagenes/XNOR.png");
        ImageView imgXnor=new ImageView();      
-       imgXnor.setImage(imgXNOR);        
+       imgXnor.setImage(imgXNOR);
+       imgXnor.setX(100);
+       imgXnor.setY(100);
        root.getChildren().add(imgXnor);
     }
     @FXML
@@ -136,7 +144,9 @@ public class FXMLDocumentController implements Initializable {
        facade.crearComp("NOT");
        Image imgNOT =new Image("CompImagenes/NOT.png");
        ImageView imgNot=new ImageView();      
-       imgNot.setImage(imgNOT);        
+       imgNot.setImage(imgNOT);  
+       imgNot.setX(100);
+       imgNot.setY(100);
        root.getChildren().add(imgNot);
     }
     @FXML
@@ -145,6 +155,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgTRUE =new Image("CompImagenes/TRUE.png");
        ImageView imgTrue=new ImageView();      
        imgTrue.setImage(imgTRUE);
+       imgTrue.setX(100);
+       imgTrue.setY(100);
        root.getChildren().add(imgTrue); 
     }
     @FXML
@@ -153,6 +165,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgFALSE =new Image("CompImagenes/FALSE.png");
        ImageView imgFalse=new ImageView();      
        imgFalse.setImage(imgFALSE);
+       imgFalse.setX(100);
+       imgFalse.setY(100);
        root.getChildren().add(imgFalse);
     }      
     
