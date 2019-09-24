@@ -20,6 +20,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.image.Image;
 import Facade.Facade;
+import java.awt.event.MouseEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -36,6 +38,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML private TextField idComp1;
     @FXML private TextField idComp2;
     @FXML private AnchorPane root;
+    double orgSceneX, orgSceneY;
+    double orgTranslateX, orgTranslateY;
     private DoubleEndedLinkedList<ImageView> listaImgComp;
    
     public FXMLDocumentController() {
@@ -76,16 +80,19 @@ public class FXMLDocumentController implements Initializable {
        Image imgAND =new Image("CompImagenes/AND.png");
        ImageView imgAnd=new ImageView();      
        imgAnd.setImage(imgAND);
-       root.getChildren().add(imgAnd);       
-       
-       
+//       imgAnd.setOnMousePressed(circleOnMousePressedEventHandler);
+//       imgAnd.setOnMouseDragged(circleOnMouseDraggedEventHandler);
+       root.getChildren().add(imgAnd); 
     }
+    
+    
     @FXML
     private void btnNand(ActionEvent event) throws IOException {
         facade.crearComp("NAND");
         Image imgNAND =new Image("CompImagenes/NAND.png");
         ImageView imgNand=new ImageView();      
         imgNand.setImage(imgNAND);
+        
         imgNand.setX(100);
         imgNand.setY(100);
         listaImgComp.add(imgNand);
@@ -135,6 +142,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnTrue(ActionEvent event) throws IOException {
        facade.crearComp("TRUE");
+       Image imgTRUE =new Image("CompImagenes/TRUE.png");
+       ImageView imgTrue=new ImageView();      
+       imgTrue.setImage(imgTRUE);
+       root.getChildren().add(imgTrue); 
     }
     @FXML
     private void btnFalse(ActionEvent event) throws IOException {
