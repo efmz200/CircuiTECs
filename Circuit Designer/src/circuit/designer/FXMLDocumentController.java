@@ -46,29 +46,7 @@ public class FXMLDocumentController implements Initializable {
         this.facade = new Facade();
     }
     
-    @FXML
-    private void cargarBtns(){
-        
-        //Obtencion del link de las imagenes 
-        URL linkAND  = getClass().getResource("/CompImages/AND.png");
-        URL linkNAND = getClass().getResource("/CompImages/NAND.png");
-        URL linkNOR  = getClass().getResource("/CompImages/NOR.png");
-        URL linkNOT  = getClass().getResource("/CompImages/NOT.png");
-        URL linkOR   = getClass().getResource("/CompImages/OR.png");
-        URL linkXNOR = getClass().getResource("/CompImages/XNOR.png");
-        URL linkXOR  = getClass().getResource("/CompImages/XOR.png");
-        
-        //guardado de las imagenes en una variable 
-        Image imgAND =new Image(linkAND.toString(),200,200,false,true); 
-        Image imgNAND =new Image(linkNAND.toString(),200,200,false,true); 
-        Image imNOR =new Image(linkNOR.toString(),200,200,false,true); 
-        Image imgNOT =new Image(linkNOT.toString(),200,200,false,true); 
-        Image imgOR =new Image(linkOR.toString(),200,200,false,true); 
-        Image imgXNOR =new Image(linkXNOR.toString(),200,200,false,true); 
-        Image imgXOR =new Image(linkOR.toString(),200,200,false,true);
-        
-        //botnAnd.setGraphic(new ImageView(imgAND));
-    }
+      
     
     @FXML
     private void btnCorrer(ActionEvent event) throws IOException {
@@ -82,10 +60,36 @@ public class FXMLDocumentController implements Initializable {
        imgAnd.setImage(imgAND);
        imgAnd.setX(100);
        imgAnd.setY(100);
-//       imgAnd.setOnMousePressed(circleOnMousePressedEventHandler);
-//       imgAnd.setOnMouseDragged(circleOnMouseDraggedEventHandler);
+//     imgAnd.setOnMousePressed(OnMousePressedEventHandler);
+//     imgAnd.setOnMouseDragged(OnMouseDraggedEventHandler);
        root.getChildren().add(imgAnd); 
     }
+//    EventHandler<MouseEvent> OnMousePressedEventHandler = 
+//        new EventHandler<MouseEvent>() {
+// 
+//        @Override
+//        public void handle(MouseEvent t) {
+//            orgSceneX = t.getX();
+//            orgSceneY = t.getY();
+//            orgTranslateX = ((ImageView)(t.getSource())).getTranslateX();
+//            orgTranslateY = ((ImageView)(t.getSource())).getTranslateY();
+//        }
+//    };
+//     
+//    EventHandler<MouseEvent> OnMouseDraggedEventHandler = 
+//        new EventHandler<MouseEvent>() {
+// 
+//        @Override
+//        public void handle(MouseEvent t) {
+//            double offsetX = t.getSceneX() - orgSceneX;
+//            double offsetY = t.getSceneY() - orgSceneY;
+//            double newTranslateX = orgTranslateX + offsetX;
+//            double newTranslateY = orgTranslateY + offsetY;
+//             
+//            ((Circle)(t.getSource())).setTranslateX(newTranslateX);
+//            ((Circle)(t.getSource())).setTranslateY(newTranslateY);
+//        }
+//    };
     
     
     @FXML
