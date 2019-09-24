@@ -23,6 +23,7 @@ import Facade.Facade;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import listas.DoubleEndedLinkedList;
 
 
 /**
@@ -35,6 +36,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML private TextField idComp1;
     @FXML private TextField idComp2;
     @FXML private AnchorPane root;
+    private DoubleEndedLinkedList<ImageView> listaImgComp;
    
     public FXMLDocumentController() {
         this.facade = new Facade();
@@ -83,7 +85,11 @@ public class FXMLDocumentController implements Initializable {
         facade.crearComp("NAND");
         Image imgNAND =new Image("CompImagenes/NAND.png");
         ImageView imgNand=new ImageView();      
-        imgNand.setImage(imgNAND);        
+        imgNand.setImage(imgNAND);
+        imgNand.setX(100);
+        imgNand.setY(100);
+        listaImgComp.add(imgNand);
+        System.out.println(listaImgComp.getNodo(0).getDato().getX());
         root.getChildren().add(imgNand);
     }
     @FXML
@@ -153,7 +159,7 @@ public class FXMLDocumentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) { 
-        
+        listaImgComp=new DoubleEndedLinkedList();
         
         //TODO   
     }    

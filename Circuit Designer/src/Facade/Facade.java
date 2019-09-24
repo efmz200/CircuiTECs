@@ -19,7 +19,7 @@ public class Facade {
     //DoubleEndedLinkedList list;
     private int id;
     private int cantCompuertas;
-    OprComp opr= new OprComp();
+    private OprComp opr= new OprComp();
     
     public Facade(){
         listaCompuertas= new DoubleEndedLinkedList();

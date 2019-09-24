@@ -6,13 +6,17 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="root" fx:id="root" prefHeight="950.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="circuit.designer.FXMLDocumentController">
     <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadcdd" height="989.0" layoutX="1385.0" stroke="BLACK" strokeType="INSIDE" width="416.0" />
-      <Button fx:id="btnRun" layoutX="1399.0" layoutY="934.0" onAction="#btnCorrer" prefHeight="31.0" prefWidth="397.0" text="Correr" />
+      <Button fx:id="btnRun" layoutX="1399.0" layoutY="904.0" onAction="#btnCorrer" prefHeight="60.0" prefWidth="397.0" text="Correr">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
       <Button fx:id="btnConect" layoutX="1399.0" layoutY="795.0" onAction="#conectar" prefHeight="31.0" prefWidth="397.0" text="Conectar" />
-      <TextField fx:id="idComp1" layoutX="1400.0" layoutY="857.0" prefHeight="31.0" prefWidth="165.0" promptText="ID Compuerta 1" />
+      <TextField fx:id="idComp1" layoutX="1400.0" layoutY="857.0" prefHeight="31.0" prefWidth="178.0" promptText="ID Compuerta 1" />
       <TextField fx:id="idComp2" layoutX="1617.0" layoutY="857.0" prefHeight="31.0" prefWidth="178.0" promptText="ID Compuerta 2" />
       <Button fx:id="btnXOR" layoutX="1396.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnXor" prefHeight="93.0" prefWidth="190.0">
          <graphic>
