@@ -26,7 +26,14 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="btnTRUE" layoutX="1396.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnTrue" prefHeight="100.0" prefWidth="186.0" text="TRUE" />
+      <Button fx:id="btnTRUE" layoutX="1396.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnTrue" prefHeight="100.0" prefWidth="186.0">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../CompImagenes/TRUE.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Button fx:id="btnOR" layoutX="1396.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnOr" prefHeight="105.0" prefWidth="190.0">
          <graphic>
             <ImageView fitHeight="89.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
@@ -59,7 +66,14 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="btnFALSE" layoutX="1607.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnFalse" prefHeight="100.0" prefWidth="186.0" text="FALSE" />
+      <Button fx:id="btnFALSE" layoutX="1607.0" layoutY="26.0" mnemonicParsing="false" onAction="#btnFalse" prefHeight="100.0" prefWidth="186.0">
+         <graphic>
+            <ImageView fitHeight="75.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../CompImagenes/FALSE.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Button id="botnAnd" fx:id="btnAND" layoutX="1396.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnAnd" prefHeight="97.0" prefWidth="186.0">
          <graphic>
             <ImageView fitHeight="100.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true">
