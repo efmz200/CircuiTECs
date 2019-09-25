@@ -20,10 +20,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.image.Image;
 import Facade.Facade;
-import java.awt.event.MouseEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import listas.DoubleEndedLinkedList;
 
@@ -58,38 +58,37 @@ public class FXMLDocumentController implements Initializable {
        Image imgAND =new Image("CompImagenes/AND.png");
        ImageView imgAnd=new ImageView();      
        imgAnd.setImage(imgAND);
-       imgAnd.setX(100);
-       imgAnd.setY(100);
-//     imgAnd.setOnMousePressed(OnMousePressedEventHandler);
-//     imgAnd.setOnMouseDragged(OnMouseDraggedEventHandler);
+       imgAnd.setTranslateX(100);
+       imgAnd.setTranslateY(100);
+       imgAnd.setOnMousePressed(OnMousePressedEventHandler);
+       imgAnd.setOnMouseDragged(OnMouseDraggedEventHandler);
        root.getChildren().add(imgAnd); 
+       
     }
-//    EventHandler<MouseEvent> OnMousePressedEventHandler = 
-//        new EventHandler<MouseEvent>() {
-// 
-//        @Override
-//        public void handle(MouseEvent t) {
-//            orgSceneX = t.getX();
-//            orgSceneY = t.getY();
-//            orgTranslateX = ((ImageView)(t.getSource())).getTranslateX();
-//            orgTranslateY = ((ImageView)(t.getSource())).getTranslateY();
-//        }
-//    };
-//     
-//    EventHandler<MouseEvent> OnMouseDraggedEventHandler = 
-//        new EventHandler<MouseEvent>() {
-// 
-//        @Override
-//        public void handle(MouseEvent t) {
-//            double offsetX = t.getSceneX() - orgSceneX;
-//            double offsetY = t.getSceneY() - orgSceneY;
-//            double newTranslateX = orgTranslateX + offsetX;
-//            double newTranslateY = orgTranslateY + offsetY;
-//             
-//            ((Circle)(t.getSource())).setTranslateX(newTranslateX);
-//            ((Circle)(t.getSource())).setTranslateY(newTranslateY);
-//        }
-//    };
+    EventHandler<MouseEvent> OnMousePressedEventHandler = new EventHandler<MouseEvent>() {
+ 
+        @Override
+        public void handle(MouseEvent t) {
+            orgSceneX = t.getX();
+            orgSceneY = t.getY();
+            orgTranslateX = ((ImageView)(t.getSource())).getTranslateX();
+            orgTranslateY = ((ImageView)(t.getSource())).getTranslateY();
+        }
+    };
+     
+    EventHandler<MouseEvent> OnMouseDraggedEventHandler = new EventHandler<MouseEvent>() {
+ 
+        @Override
+        public void handle(MouseEvent t) {
+            double offsetX = t.getSceneX() - orgSceneX;
+            double offsetY = t.getSceneY() - orgSceneY;
+            double newTranslateX = orgTranslateX + offsetX;
+            double newTranslateY = orgTranslateY + offsetY;
+             
+            ((ImageView)(t.getSource())).setTranslateX(newTranslateX);
+            ((ImageView)(t.getSource())).setTranslateY(newTranslateY);
+        }
+    };
     
     
     @FXML
