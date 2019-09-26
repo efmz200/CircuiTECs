@@ -58,24 +58,33 @@ public class FXMLDocumentController implements Initializable {
        Image imgAND =new Image("CompImagenes/AND.png");
        ImageView imgAnd=new ImageView();      
        imgAnd.setImage(imgAND);
-       imgAnd.setTranslateX(100);
-       imgAnd.setTranslateY(100);
+       imgAnd.setTranslateX(1);
+       imgAnd.setTranslateY(1);
        imgAnd.setOnMousePressed(OnMousePressedEventHandler);
        imgAnd.setOnMouseDragged(OnMouseDraggedEventHandler);
+       listaImgComp.add(imgAnd);
        root.getChildren().add(imgAnd); 
        
     }
+    /**
+     * Tomado de:
+     * http://java-buddy.blogspot.com/2013/07/javafx-drag-and-move-something.html
+     */
+    
     EventHandler<MouseEvent> OnMousePressedEventHandler = new EventHandler<MouseEvent>() {
  
         @Override
         public void handle(MouseEvent t) {
-            orgSceneX = t.getX();
-            orgSceneY = t.getY();
+            orgSceneX = t.getSceneX();
+            orgSceneY = t.getSceneY();
             orgTranslateX = ((ImageView)(t.getSource())).getTranslateX();
             orgTranslateY = ((ImageView)(t.getSource())).getTranslateY();
         }
     };
-     
+    /**
+     * Tomado de:
+     * http://java-buddy.blogspot.com/2013/07/javafx-drag-and-move-something.html
+     */ 
     EventHandler<MouseEvent> OnMouseDraggedEventHandler = new EventHandler<MouseEvent>() {
  
         @Override
