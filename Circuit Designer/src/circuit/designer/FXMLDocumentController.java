@@ -213,8 +213,9 @@ public class FXMLDocumentController implements Initializable {
         facade.conectar(id1, id2);
         ImageView comp1= listaImgComp.getNodo(id1).getDato();
         ImageView comp2 =listaImgComp.getNodo(id2).getDato();
-        Line linea= new Line(comp1.getX(),comp1.getY(),comp2.getX(),comp2.getY());
+        Line linea= new Line(comp1.getTranslateX()+159,comp1.getTranslateY()+48,comp2.getTranslateX()+8,comp2.getTranslateY()+5+Math.random()*80+1);
         linea.setStroke(Color.STEELBLUE);
+        linea.setStrokeWidth(3);
         root.getChildren().add(linea);
     }
     
