@@ -43,6 +43,7 @@ public class FXMLDocumentController implements Initializable {
     double orgSceneX, orgSceneY;
     double orgTranslateX, orgTranslateY;
     private DoubleEndedLinkedList<ImageView> listaImgComp;
+    private DoubleEndedLinkedList<String> listaRGB;
     
     @FXML
     private void btnCorrer(ActionEvent event) throws IOException {
@@ -214,8 +215,18 @@ public class FXMLDocumentController implements Initializable {
         ImageView comp1= listaImgComp.getNodo(id1).getDato();
         ImageView comp2 =listaImgComp.getNodo(id2).getDato();
         Line linea= new Line(comp1.getTranslateX()+159,comp1.getTranslateY()+48,comp2.getTranslateX()+8,comp2.getTranslateY()+5+Math.random()*80+1);
-        linea.setStroke(Color.STEELBLUE);
-        linea.setStrokeWidth(3);
+        int col1= (int) Math.round(Math.random()*254);
+        int col2= (int) Math.round(Math.random()*254);
+        int col3= (int) Math.round(Math.random()*254);
+        String RGB= String.valueOf(col1)+String.valueOf(col2)+String.valueOf(col3);
+        while (listaRGB.in(RGB)){
+            col1= (int) Math.round(Math.random()*254);
+            col2= (int) Math.round(Math.random()*254);
+            col3= (int) Math.round(Math.random()*254); 
+        }
+        listaRGB.add(RGB);
+        linea.setStroke(Color.rgb(col1, col2, col3));
+        linea.setStrokeWidth(4);
         root.getChildren().add(linea);
     }
     
@@ -233,6 +244,7 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) { 
         listaImgComp=new DoubleEndedLinkedList();
         facade= new Facade();
+        listaRGB=new DoubleEndedLinkedList();
         
         //TODO   
     }    
