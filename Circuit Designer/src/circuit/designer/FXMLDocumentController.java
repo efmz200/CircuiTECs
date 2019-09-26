@@ -101,8 +101,10 @@ public class FXMLDocumentController implements Initializable {
         Image imgNAND =new Image("CompImagenes/NAND.png");
         ImageView imgNand=new ImageView();      
         imgNand.setImage(imgNAND);        
-        imgNand.setX(100);
-        imgNand.setY(100);
+        imgNand.setTranslateX(100);
+        imgNand.setTranslateY(100);
+        imgNand.setOnMousePressed(OnMousePressedEventHandler);
+        imgNand.setOnMouseDragged(OnMouseDraggedEventHandler);
         listaImgComp.add(imgNand);
         root.getChildren().add(imgNand);
     }
