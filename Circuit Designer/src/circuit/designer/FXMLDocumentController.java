@@ -25,6 +25,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 import listas.DoubleEndedLinkedList;
 
 
@@ -41,36 +43,15 @@ public class FXMLDocumentController implements Initializable {
     double orgSceneX, orgSceneY;
     double orgTranslateX, orgTranslateY;
     private DoubleEndedLinkedList<ImageView> listaImgComp;
-   
-    public FXMLDocumentController() {
-        this.facade = new Facade();
-    }
-    
-      
     
     @FXML
     private void btnCorrer(ActionEvent event) throws IOException {
        facade.correr();
-    }
-    @FXML
-    private void btnAnd(ActionEvent event) throws IOException {
-       facade.crearComp("AND");
-       Image imgAND =new Image("CompImagenes/AND.png");
-       ImageView imgAnd=new ImageView();      
-       imgAnd.setImage(imgAND);
-       imgAnd.setTranslateX(1);
-       imgAnd.setTranslateY(1);
-       imgAnd.setOnMousePressed(OnMousePressedEventHandler);
-       imgAnd.setOnMouseDragged(OnMouseDraggedEventHandler);
-       listaImgComp.add(imgAnd);
-       root.getChildren().add(imgAnd); 
-       
-    }
+    }    
     /**
      * Tomado de:
      * http://java-buddy.blogspot.com/2013/07/javafx-drag-and-move-something.html
      */
-    
     EventHandler<MouseEvent> OnMousePressedEventHandler = new EventHandler<MouseEvent>() {
  
         @Override
@@ -81,6 +62,7 @@ public class FXMLDocumentController implements Initializable {
             orgTranslateY = ((ImageView)(t.getSource())).getTranslateY();
         }
     };
+    
     /**
      * Tomado de:
      * http://java-buddy.blogspot.com/2013/07/javafx-drag-and-move-something.html
@@ -99,6 +81,19 @@ public class FXMLDocumentController implements Initializable {
         }
     };
     
+    @FXML
+    private void btnAnd(ActionEvent event) throws IOException {
+       facade.crearComp("AND");
+       Image imgAND =new Image("CompImagenes/AND.png");
+       ImageView imgAnd=new ImageView();      
+       imgAnd.setImage(imgAND);
+       imgAnd.setTranslateX(1);
+       imgAnd.setTranslateY(1);
+       imgAnd.setOnMousePressed(OnMousePressedEventHandler);
+       imgAnd.setOnMouseDragged(OnMouseDraggedEventHandler);
+       listaImgComp.add(imgAnd);
+       root.getChildren().add(imgAnd);        
+    }
     
     @FXML
     private void btnNand(ActionEvent event) throws IOException {
@@ -111,6 +106,7 @@ public class FXMLDocumentController implements Initializable {
         listaImgComp.add(imgNand);
         root.getChildren().add(imgNand);
     }
+    
     @FXML
     private void btnOr(ActionEvent event) throws IOException {
        facade.crearComp("OR");
@@ -119,8 +115,10 @@ public class FXMLDocumentController implements Initializable {
        imgOr.setImage(imgOR);   
        imgOr.setX(100);
        imgOr.setY(100);
+       listaImgComp.add(imgOr);
        root.getChildren().add(imgOr);
     }
+    
     @FXML
     private void btnNor(ActionEvent event) throws IOException {
        facade.crearComp("NOR");
@@ -129,8 +127,10 @@ public class FXMLDocumentController implements Initializable {
        imgNor.setImage(imgNOR);
        imgNor.setX(100);
        imgNor.setY(100);
+       listaImgComp.add(imgNor);
        root.getChildren().add(imgNor);
     }
+    
     @FXML
     private void btnXor(ActionEvent event) throws IOException {
        facade.crearComp("XOR");
@@ -139,8 +139,10 @@ public class FXMLDocumentController implements Initializable {
        imgXor.setImage(imgXOR);
        imgXor.setX(100);
        imgXor.setY(100);
+       listaImgComp.add(imgXor);
        root.getChildren().add(imgXor);
     }
+    
     @FXML
     private void btnXnor(ActionEvent event) throws IOException {
        facade.crearComp("XNOR");
@@ -149,8 +151,10 @@ public class FXMLDocumentController implements Initializable {
        imgXnor.setImage(imgXNOR);
        imgXnor.setX(100);
        imgXnor.setY(100);
+       listaImgComp.add(imgXnor);
        root.getChildren().add(imgXnor);
     }
+    
     @FXML
     private void btnNot(ActionEvent event) throws IOException {
        facade.crearComp("NOT");
@@ -159,6 +163,7 @@ public class FXMLDocumentController implements Initializable {
        imgNot.setImage(imgNOT);  
        imgNot.setX(100);
        imgNot.setY(100);
+       listaImgComp.add(imgNot);
        root.getChildren().add(imgNot);
     }
     @FXML
@@ -169,8 +174,10 @@ public class FXMLDocumentController implements Initializable {
        imgTrue.setImage(imgTRUE);
        imgTrue.setX(100);
        imgTrue.setY(100);
+       listaImgComp.add(imgTrue);
        root.getChildren().add(imgTrue); 
     }
+    
     @FXML
     private void btnFalse(ActionEvent event) throws IOException {
        facade.crearComp("FALSE");
@@ -179,6 +186,7 @@ public class FXMLDocumentController implements Initializable {
        imgFalse.setImage(imgFALSE);
        imgFalse.setX(100);
        imgFalse.setY(100);
+       listaImgComp.add(imgFalse);
        root.getChildren().add(imgFalse);
     }      
     
@@ -187,20 +195,27 @@ public class FXMLDocumentController implements Initializable {
         int id1=Integer.parseInt(idComp1.getText());
         int id2=Integer.parseInt(idComp2.getText());
         facade.conectar(id1, id2);
-    }  
+        ImageView comp1= listaImgComp.getNodo(id1).getDato();
+        ImageView comp2 =listaImgComp.getNodo(id2).getDato();
+        Line linea= new Line(comp1.getX(),comp1.getY(),comp2.getX(),comp2.getY());
+        linea.setStroke(Color.STEELBLUE);
+        root.getChildren().add(linea);
+    }
+    
     @FXML
     public void conecciones(ActionEvent event) throws IOException {
         facade.conectionList();
     }
+    
     @FXML
     public void ventana(ActionEvent event) throws IOException {
         facade.conectionList();
-    }
-    
+    }   
 
     @Override
     public void initialize(URL url, ResourceBundle rb) { 
         listaImgComp=new DoubleEndedLinkedList();
+        facade= new Facade();
         
         //TODO   
     }    
