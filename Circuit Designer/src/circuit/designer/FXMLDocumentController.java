@@ -157,8 +157,10 @@ public class FXMLDocumentController implements Initializable {
        Image imgXNOR =new Image("CompImagenes/XNOR.png");
        ImageView imgXnor=new ImageView();      
        imgXnor.setImage(imgXNOR);
-       imgXnor.setX(100);
-       imgXnor.setY(100);
+       imgXnor.setTranslateX(100);
+       imgXnor.setTranslateY(100);
+       imgXnor.setOnMousePressed(OnMousePressedEventHandler);
+       imgXnor.setOnMouseDragged(OnMouseDraggedEventHandler);
        listaImgComp.add(imgXnor);
        root.getChildren().add(imgXnor);
     }
