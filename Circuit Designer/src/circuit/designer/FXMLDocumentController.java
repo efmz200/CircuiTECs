@@ -101,8 +101,8 @@ public class FXMLDocumentController implements Initializable {
         Image imgNAND =new Image("CompImagenes/NAND.png");
         ImageView imgNand=new ImageView();      
         imgNand.setImage(imgNAND);        
-        imgNand.setTranslateX(100);
-        imgNand.setTranslateY(100);
+        imgNand.setTranslateX(1);
+        imgNand.setTranslateY(1);
         imgNand.setOnMousePressed(OnMousePressedEventHandler);
         imgNand.setOnMouseDragged(OnMouseDraggedEventHandler);
         listaImgComp.add(imgNand);
@@ -115,8 +115,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgOR =new Image("CompImagenes/OR.png");
        ImageView imgOr=new ImageView();      
        imgOr.setImage(imgOR);   
-       imgOr.setTranslateX(100);
-       imgOr.setTranslateY(100);
+       imgOr.setTranslateX(1);
+       imgOr.setTranslateY(1);
        imgOr.setOnMousePressed(OnMousePressedEventHandler);
        imgOr.setOnMouseDragged(OnMouseDraggedEventHandler);
        listaImgComp.add(imgOr);
@@ -129,8 +129,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgNOR =new Image("CompImagenes/NOR.png");
        ImageView imgNor=new ImageView();      
        imgNor.setImage(imgNOR);
-       imgNor.setTranslateX(100);
-       imgNor.setTranslateY(100);
+       imgNor.setTranslateX(1);
+       imgNor.setTranslateY(1);
        imgNor.setOnMousePressed(OnMousePressedEventHandler);
        imgNor.setOnMouseDragged(OnMouseDraggedEventHandler);
        listaImgComp.add(imgNor);
@@ -143,8 +143,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgXOR =new Image("CompImagenes/XOR.png");
        ImageView imgXor=new ImageView();      
        imgXor.setImage(imgXOR);
-       imgXor.setTranslateX(100);
-       imgXor.setTranslateY(100);
+       imgXor.setTranslateX(1);
+       imgXor.setTranslateY(1);
        imgXor.setOnMousePressed(OnMousePressedEventHandler);
        imgXor.setOnMouseDragged(OnMouseDraggedEventHandler);
        listaImgComp.add(imgXor);
@@ -157,8 +157,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgXNOR =new Image("CompImagenes/XNOR.png");
        ImageView imgXnor=new ImageView();      
        imgXnor.setImage(imgXNOR);
-       imgXnor.setTranslateX(100);
-       imgXnor.setTranslateY(100);
+       imgXnor.setTranslateX(1);
+       imgXnor.setTranslateY(1);
        imgXnor.setOnMousePressed(OnMousePressedEventHandler);
        imgXnor.setOnMouseDragged(OnMouseDraggedEventHandler);
        listaImgComp.add(imgXnor);
@@ -171,8 +171,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgNOT =new Image("CompImagenes/NOT.png");
        ImageView imgNot=new ImageView();      
        imgNot.setImage(imgNOT);  
-       imgNot.setTranslateX(100);
-       imgNot.setTranslateY(100);
+       imgNot.setTranslateX(1);
+       imgNot.setTranslateY(1);
        imgNot.setOnMousePressed(OnMousePressedEventHandler);
        imgNot.setOnMouseDragged(OnMouseDraggedEventHandler);
        listaImgComp.add(imgNot);
@@ -184,8 +184,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgTRUE =new Image("CompImagenes/TRUE.png");
        ImageView imgTrue=new ImageView();      
        imgTrue.setImage(imgTRUE);
-       imgTrue.setTranslateX(100);
-       imgTrue.setTranslateY(100);
+       imgTrue.setTranslateX(1);
+       imgTrue.setTranslateY(1);
        imgTrue.setOnMousePressed(OnMousePressedEventHandler);
        imgTrue.setOnMouseDragged(OnMouseDraggedEventHandler);
        listaImgComp.add(imgTrue);
@@ -198,8 +198,8 @@ public class FXMLDocumentController implements Initializable {
        Image imgFALSE =new Image("CompImagenes/FALSE.png");
        ImageView imgFalse=new ImageView();      
        imgFalse.setImage(imgFALSE);
-       imgFalse.setTranslateX(100);
-       imgFalse.setTranslateY(100);
+       imgFalse.setTranslateX(1);
+       imgFalse.setTranslateY(1);
        imgFalse.setOnMousePressed(OnMousePressedEventHandler);
        imgFalse.setOnMouseDragged(OnMouseDraggedEventHandler);
        listaImgComp.add(imgFalse);
