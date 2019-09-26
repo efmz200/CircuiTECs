@@ -198,8 +198,10 @@ public class FXMLDocumentController implements Initializable {
        Image imgFALSE =new Image("CompImagenes/FALSE.png");
        ImageView imgFalse=new ImageView();      
        imgFalse.setImage(imgFALSE);
-       imgFalse.setX(100);
-       imgFalse.setY(100);
+       imgFalse.setTranslateX(100);
+       imgFalse.setTranslateY(100);
+       imgFalse.setOnMousePressed(OnMousePressedEventHandler);
+       imgFalse.setOnMouseDragged(OnMouseDraggedEventHandler);
        listaImgComp.add(imgFalse);
        root.getChildren().add(imgFalse);
     }      
