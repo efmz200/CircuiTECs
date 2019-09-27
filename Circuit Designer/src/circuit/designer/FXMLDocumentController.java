@@ -61,6 +61,7 @@ public class FXMLDocumentController implements Initializable {
            salida.setFont(new Font("Serif", 20));
            root.getChildren().add(salida);
            aux=aux.getNext();
+           contador++;
        }
     }    
     /**
