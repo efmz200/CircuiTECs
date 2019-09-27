@@ -27,7 +27,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
 import listas.DoubleEndedLinkedList;
+import listas.Nodo;
 
 
 /**
@@ -48,6 +50,18 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void btnCorrer(ActionEvent event) throws IOException {
        facade.correr();
+       DoubleEndedLinkedList<Integer> listId=facade.compFinales();
+       Nodo<Integer> aux=listId.getNodo(0);
+       int contador=0;
+       while (aux!=null){
+           Nodo<ImageView> imgCompuerta=listaImgComp.getNodo(aux.getDato());
+           Label salida=new Label(Boolean.toString(facade.getValor(listId.getInfo(contador))));
+           salida.setLayoutX(imgCompuerta.getDato().getTranslateX()+160);
+           salida.setLayoutY(imgCompuerta.getDato().getTranslateY()+40);
+           salida.setFont(new Font("Serif", 20));
+           root.getChildren().add(salida);
+           aux=aux.getNext();
+       }
     }    
     /**
      * Tomado de:
@@ -208,7 +222,7 @@ public class FXMLDocumentController implements Initializable {
     }      
     
     @FXML
-    public void conectar(ActionEvent event) throws IOException {
+    private void conectar(ActionEvent event) throws IOException {
         int id1=Integer.parseInt(idComp1.getText());
         int id2=Integer.parseInt(idComp2.getText());
         facade.conectar(id1, id2);
@@ -231,14 +245,14 @@ public class FXMLDocumentController implements Initializable {
     }
     
     @FXML
-    public void conecciones(ActionEvent event) throws IOException {
+    private void conecciones(ActionEvent event) throws IOException {
         facade.conectionList();
     }
     
-    @FXML
-    public void ventana(ActionEvent event) throws IOException {
-        facade.conectionList();
-    }   
+//    @FXML
+//    public void ventana(ActionEvent event) throws IOException {
+//        facade.conectionList();
+//    }   
 
     @Override
     public void initialize(URL url, ResourceBundle rb) { 
