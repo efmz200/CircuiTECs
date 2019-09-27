@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package circuit.designer;
 
 import java.net.URL;
@@ -59,6 +55,7 @@ public class FXMLDocumentController implements Initializable {
        }
     }    
     /**
+     * Metodo que hace que la compuerta se mueve al hacer click sobre ella 
      * Tomado de:
      * http://java-buddy.blogspot.com/2013/07/javafx-drag-and-move-something.html
      */
@@ -74,6 +71,7 @@ public class FXMLDocumentController implements Initializable {
     };
     
     /**
+     * Metodo que define la posicion de la compuerta al soltar el boton del mouse
      * Tomado de:
      * http://java-buddy.blogspot.com/2013/07/javafx-drag-and-move-something.html
      */ 
@@ -91,6 +89,11 @@ public class FXMLDocumentController implements Initializable {
         }
     };
     
+    /**
+     * Metodo que establece la funcion del boton AND el cual crea un imageView y lo muestra en pantalla
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnAnd(ActionEvent event) throws IOException {
        facade.crearComp("AND");
@@ -104,7 +107,11 @@ public class FXMLDocumentController implements Initializable {
        listaImgComp.add(imgAnd);
        root.getChildren().add(imgAnd);        
     }
-    
+    /**
+     * Metodo que establece la funcion del boton NAND el cual crea un imageView y lo muestra en pantalla
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnNand(ActionEvent event) throws IOException {
         facade.crearComp("NAND");
@@ -118,7 +125,11 @@ public class FXMLDocumentController implements Initializable {
         listaImgComp.add(imgNand);
         root.getChildren().add(imgNand);
     }
-    
+    /**
+     * Metodo que establece la funcion del boton OR el cual crea un imageView y lo muestra en pantalla
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnOr(ActionEvent event) throws IOException {
        facade.crearComp("OR");
@@ -133,6 +144,11 @@ public class FXMLDocumentController implements Initializable {
        root.getChildren().add(imgOr);
     }
     
+    /**
+     * Metodo que establece la funcion del boton NOR el cual crea un imageView y lo muestra en pantalla
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnNor(ActionEvent event) throws IOException {
        facade.crearComp("NOR");
@@ -147,6 +163,11 @@ public class FXMLDocumentController implements Initializable {
        root.getChildren().add(imgNor);
     }
     
+    /**
+     * Metodo que establece la funcion del boton XOR el cual crea un imageView y lo muestra en pantalla
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnXor(ActionEvent event) throws IOException {
        facade.crearComp("XOR");
@@ -161,6 +182,11 @@ public class FXMLDocumentController implements Initializable {
        root.getChildren().add(imgXor);
     }
     
+    /**
+     * Metodo que establece la funcion del boton XNOR el cual crea un imageView y lo muestra en pantalla
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnXnor(ActionEvent event) throws IOException {
        facade.crearComp("XNOR");
@@ -175,6 +201,11 @@ public class FXMLDocumentController implements Initializable {
        root.getChildren().add(imgXnor);
     }
     
+    /**
+     * Metodo que establece la funcion del boton NOT el cual crea un imageView y lo muestra en pantalla
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnNot(ActionEvent event) throws IOException {
        facade.crearComp("NOT");
@@ -188,6 +219,11 @@ public class FXMLDocumentController implements Initializable {
        listaImgComp.add(imgNot);
        root.getChildren().add(imgNot);
     }
+    /**
+     * Metodo que establece la funcion del boton TRUE el cual crea un imageView y lo muestra en pantalla
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnTrue(ActionEvent event) throws IOException {
        facade.crearComp("TRUE");
@@ -202,6 +238,11 @@ public class FXMLDocumentController implements Initializable {
        root.getChildren().add(imgTrue); 
     }
     
+    /**
+     * Metodo que establece la funcion del boton FALSEel cual crea un imageView y lo muestra en pantalla
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void btnFalse(ActionEvent event) throws IOException {
        facade.crearComp("FALSE");
@@ -216,6 +257,11 @@ public class FXMLDocumentController implements Initializable {
        root.getChildren().add(imgFalse);
     }      
     
+    /**
+     * Metodo que hace que el boton conectar reciba los datos obtenidos de los TextField para poder conectar las compuertas
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void conectar(ActionEvent event) throws IOException {
         int id1=Integer.parseInt(idComp1.getText());

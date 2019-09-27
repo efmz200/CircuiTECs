@@ -1,7 +1,6 @@
 package listas;
 
 /**
- *
  * @author Erick
  * @param <T>
  */

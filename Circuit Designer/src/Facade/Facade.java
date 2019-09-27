@@ -100,7 +100,7 @@ public class Facade {
     public void conectionList(){
         Nodo<Compuerta> aux=listaCompuertas.getNodo(0);
         while (aux!=null){
-            System.out.println("La compuerta "+aux.getDato().getId()+ " se conecta con");
+            System.out.println("La compuerta "+aux.getDato().getId()+ " se conecta con");            
             opr.mostratComp(aux.getDato().getListaEntradas());
             aux=aux.getNext();
         }
