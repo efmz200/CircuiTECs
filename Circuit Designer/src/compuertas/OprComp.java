@@ -10,6 +10,12 @@ import listas.Nodo;
  * @author Erick
  */
 public class OprComp {
+    /**
+     * Metodo que busca una comouerta por su id en una lista 
+     * @param compId int
+     * @param lista DoubleEndedLinkedList de compuertas
+     * @return Compuerta
+     */
     public Compuerta getComp(int compId,DoubleEndedLinkedList lista){
         Nodo<Compuerta> aux=lista.getNodo(0);
         while(aux != null){
@@ -39,6 +45,10 @@ public class OprComp {
         
         }
     }
+    /** 
+     * Metodo que muestra las compuertas que estan en una lista
+     * @param lista DoubleEndedLinkedList con las compuertas que se desean mostrar
+     */
     public void mostratComp(DoubleEndedLinkedList lista){
         Nodo<Compuerta> aux=lista.getNodo(0);
         while(aux!=null){

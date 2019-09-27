@@ -50,31 +50,55 @@ public class Compuerta {
     } 
     /**
      * Metodo que agrega una compuerta a la lista de compuertas a las que se les debe de mandar la salida de la compuerta 
-     * @param compuerta 
+     * @param compuerta Compuerta a la cual se le enviara la salida 
      */
     public void addSiguiente(Compuerta compuerta){
         compuertasSiguientes.add(compuerta);
     }
+    /** 
+     * Metodo que cambia la salida que va a tener la compuerta
+     * @param dato boolean
+     */
     private void setSalida(boolean dato){
         this.salida=dato;
     }
+    /**
+     * Metodo para obtener la salida de la compuerta
+     * @return boolean
+     */
     public boolean getSalida(){
         return salida;
     }
+    /**
+     * Metodo para poder obtener la lista de entradas de la compuerta
+     * @return DoubleEndedLinkedList lista de entradas
+     */
     public DoubleEndedLinkedList getListaEntradas() {
         return listaEntradas;
     }
-
+    /**
+     * Metodo que devuelve la cantidad de entradas que posee la compuerta
+     * @return int
+     */
     public int getCantEntradas() {
         return cantEntradas;
     }
+    /**
+     * Metodo que aumenta la cantidad de entradas que posee la entrada
+     */
     public void addCantSalida(){
         this.cantSalidas++;
     }
+    /**
+     * Metodo para obetener la cantidad de salidas que tiene la compuerta
+     * @return int
+     */
     public int getCantSalidas () {
         return cantSalidas;
     } 
-    
+    /**
+     * Metodo que hace que la compuerta genere un resultado en base a sus entradas y su tipo
+     */
     public void operacion(){
         if (tipo==("AND")){
            if(listaEntradas.in(false)){
@@ -132,6 +156,9 @@ public class Compuerta {
             }
         
     }
+    /**
+     * Metodo que envia la salida de la compuerta a las compuertas que esten en su lista de compuertas siguientes
+     */
     public void enviarSalida(){
         int fin=compuertasSiguientes.len();
         int contador=0;
@@ -140,9 +167,17 @@ public class Compuerta {
             contador++;
         }
     }
+    /**
+     * Metodo que permite cambiar el id de la compuerta
+     * @param id int
+     */
     public void setId(int id){
         this.id=id;
     }
+    /**
+     * Metodo para obtener el id de la compuerta 
+     * @return int
+     */
     public int getId(){
         return this.id;
     }
