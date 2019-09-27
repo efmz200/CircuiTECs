@@ -26,6 +26,11 @@ public class Facade {
         id=0; 
         cantCompuertas=0;
     }
+    public boolean getValor(int id){   
+        Compuerta comp;
+        comp=opr.getComp(id,listaCompuertas);
+        return comp.getSalida();
+    }
     public DoubleEndedLinkedList compFinales(){
         DoubleEndedLinkedList<Integer> listId=new DoubleEndedLinkedList();
         int cont=0;
