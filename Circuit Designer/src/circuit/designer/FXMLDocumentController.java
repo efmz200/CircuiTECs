@@ -12,12 +12,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import java.io.IOException;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.scene.image.Image;
 import Facade.Facade;
 import javafx.event.EventHandler;
@@ -42,8 +36,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML private TextField idComp1;
     @FXML private TextField idComp2;
     @FXML private AnchorPane root;
-    double orgSceneX, orgSceneY;
-    double orgTranslateX, orgTranslateY;
+    private double orgSceneX, orgSceneY;
+    private double orgTranslateX, orgTranslateY;
     private DoubleEndedLinkedList<ImageView> listaImgComp;
     private DoubleEndedLinkedList<String> listaRGB;
     
