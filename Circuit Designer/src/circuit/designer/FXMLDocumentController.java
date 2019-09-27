@@ -244,11 +244,6 @@ public class FXMLDocumentController implements Initializable {
         facade.conectionList();
     }
     
-//    @FXML
-//    public void ventana(ActionEvent event) throws IOException {
-//        facade.conectionList();
-//    }   
-
     @Override
     public void initialize(URL url, ResourceBundle rb) { 
         listaImgComp=new DoubleEndedLinkedList();
@@ -256,6 +251,5 @@ public class FXMLDocumentController implements Initializable {
         listaRGB=new DoubleEndedLinkedList();
         
         //TODO   
-    }    
-    
+    } 
 }
