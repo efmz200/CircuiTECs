@@ -26,6 +26,22 @@ public class Facade {
         id=0; 
         cantCompuertas=0;
     }
+    public DoubleEndedLinkedList compFinales(){
+        DoubleEndedLinkedList<Integer> listId=new DoubleEndedLinkedList();
+        int cont=0;
+        Nodo<Compuerta> aux= listaCompuertas.getNodo(cont);
+        while(aux != null){
+           if (aux.getDato().getCantSalidas()==0){
+               listId.add(cont);
+               aux=aux.getNext();
+               cont++;
+               continue;
+           } 
+           aux=aux.getNext();
+           cont++;
+        }
+    return listId;   
+    }
     public void conectar(int idComp1,int idComp2){
         Compuerta comp1;
         Compuerta comp2;        
